@@ -48,46 +48,79 @@ Las siete operaciones, bajo `/api/v1`, son:
 El lote atómico y la eliminación lógica son extensiones académicas. Contrato: [OpenAPI](comun/openapi.yaml).
 Reglas: [R01–R17](comun/contexto.md). [Trazabilidad y alcance](docs/trazabilidad.md).
 
-## ¿En qué falló la IA? Los cuatro casos
+## Análisis de GPT-6.1 Sol
 
-| Caso | Fallo o limitación identificada | Estado de la evidencia |
-|---|---|---|
-| **A — Sol directo** | JOIN con bloqueo parcial puede leer configuración antigua tras esperar; prueba concurrente solo cubre campos principales. Además limita prioridad más que el contrato. | Riesgo por inspección, no reproducido directamente en A. Suites propias pasan. |
-| **C — Sol con spec** | La primera implementación perdía alcance/política bajo concurrencia; pasaba 67 e2e porque faltaba ese escenario. | Prueba determinista falló; agente corrigió y acabó 68/68. Defecto inicial corregido. |
-| **B — Nemotron directo** | Omite /api/v1; procesa JSON antes de autenticar; acepta fecha imposible y extras en alcance. | Reproducido por sondas independientes. Transacción PATCH sin FOR UPDATE: riesgo adicional por inspección. |
-| **D — Nemotron con spec** | Errores incluyen timestamp/path no permitidos; JSON malformado autenticado usa formato por defecto; acepta fechas imposibles/extras. | Reproducido. SELECT FOR UPDATE usa pool.query fuera del client transaccional: defecto de bloqueo por inspección. |
+Sol construyó dos implementaciones NestJS con PostgreSQL real: A desde contrato/contexto y C con la spec, el plan y las tareas preparados. En ambos casos entregó las siete operaciones, SQL, autenticación, validaciones, pruebas y documentación. Los logs guardados muestran build y typecheck correctos, pruebas unitarias/e2e aprobadas y comprobadores HTTP que conservaron datos al detener Node y arrancar otro proceso.
 
-**Sol C** conserva [el log de una regresión fallida](experimentos/C-sol-spec/proyecto/evidencias/regresion-concurrencia-antes.txt):
-esperaba SKU-LAB-002/política nueva pero recibía la configuración antigua. Corrigió a bloquear primero y releer asociados
-después. El [repositorio final de C](experimentos/C-sol-spec/proyecto/src/promotions.repository.ts) incluye esa solución;
-el [servicio A](experimentos/A-sol-directo/proyecto/src/promotions.service.ts) conserva el patrón susceptible, sin que esta revisión haya reproducido el fallo en A.
+### Caso A — generación directa
 
-**Nemotron B** devuelve 404 al pedir `/api/v1/promociones/no-uuid`; su bootstrap no configura el prefijo y sus e2e prueban
-`/promociones`. Con cuerpo malformado sin token devuelve 400 en lugar de 401, porque el guard se ejecuta después del parser.
-**D** sí devuelve 401 sin token antes del parser, pero con token y JSON malformado devuelve `application/json` con
-`message/error/statusCode`, no el Problem contractual. Sus errores de dominio añaden `timestamp/path`, aunque el schema
-prohíbe propiedades adicionales. Ambos validadores aceptan 30 de febrero y campos extra dentro de alcance.
+**Qué hizo.** Implementó el acceso SQL de promociones principalmente en el servicio, con una clase de conexión aparte. Incluyó creación individual y por lote, fusión de PATCH, historial de activación, borrado lógico y consultas comerciales/administrativas. Conservó reportes de las siete operaciones, rollback de lote ante un fallo SQL y persistencia entre procesos.
 
-En **D** escribir `SELECT FOR UPDATE` no basta: la consulta usa el pool, no el client de `withTransaction`, por lo que
-el bloqueo de esa transacción implícita termina antes de proteger la escritura principal. La carrera resultante no fue
-reproducida en esta revisión. En B tampoco se encontró un bloqueo que abarque su lectura/validación y actualización.
+**Resultados.** Tiempo informado: **16:47**. Unitarias: **87/87**. E2E: **59/59**. Build y typecheck: exit 0, según las evidencias de la entrega. [Reporte de A](experimentos/A-sol-directo/evidencia/REPORTE.md).
 
-La frase «todo completo y verificado» de las respuestas B/D queda, por tanto, **acotada a sus pruebas propias**:
-build, tipos y unitarias aprobados pueden coexistir con un API que incumple el contrato. No se corrigieron sus soluciones
-durante la evaluación. [Informe completo con fuentes y alcance](evaluacion/informe-comparativo.md).
+**Errores, riesgos y limitaciones.** El servicio lee promoción y configuración mediante un JOIN y bloquea solo la fila principal. Si espera a otra transacción que cambia los datos asociados, existe riesgo de leer configuración antigua y perder cambios omitidos por el PATCH. Su prueba concurrente solo cambia nombre y prioridad de la tabla principal; no fuerza ese escenario asociado. Es un **riesgo por inspección, no reproducido directamente en A**. También restringe prioridad a enteros seguros de JavaScript, un máximo que el contrato no declara. Esta limitación está documentada, pero documentarla no modifica el contrato.
 
-### Reflexión final
+**Valoración.** A produjo una entrega ejecutable dentro de los casos probados y con evidencia útil. Sus pruebas aprobadas no permiten descartar el escenario concurrente que no cubren. [Servicio de A](experimentos/A-sol-directo/proyecto/src/promotions.service.ts).
 
-> La IA falló al cubrir casos difíciles y detalles del contrato, no solo al escribir código. Sol tuvo un defecto concurrente
-> que C detectó y corrigió con una regresión; Nemotron dejó diferencias en rutas, errores, validación y bloqueos que sus
-> pruebas no detectaban. La spec ayudó a orientar y revisar, pero no evitó automáticamente los errores ni redujo siempre
-> el tiempo. Aprendimos a comprobar el contrato con casos independientes y a distinguir una afirmación de éxito de su evidencia.
+### Caso C — implementación con spec preparada
 
-En esta muestra **Sol C es la entrega mejor sustentada** por trazabilidad, evidencia y regresión corregida, además del
-menor tiempo informado. No es un ranking universal: una corrida por celda, clientes distintos (Codex/OpenCode), pruebas
-propias no equivalentes y sin desglose de tiempos impiden atribuir causalidad solo al modelo o a la spec.
-El reinicio de proceso Node está documentado en Sol; D prueba cerrar/recrear Nest en el mismo proceso, no otro proceso.
-No se afirma reinicio de contenedores PostgreSQL ni integración externa. Cupones/usos están fuera de alcance por R09.
+**Qué hizo.** Usó los mismos requisitos de A más los tres documentos preparados. Separó dominio, repositorio y base de datos, incorporó defensas de integridad en SQL y relacionó tareas/etapas con archivos y resultados en `AVANCE.md`. Incluyó pruebas de contrato, concurrencia, rollback y persistencia.
+
+**Resultados.** Tiempo informado: **12:19**. Unitarias: **91/91**. E2E finales: **68/68**. Build y typecheck: exit 0, según los logs conservados. [AVANCE de C](experimentos/C-sol-spec/proyecto/AVANCE.md).
+
+**Error observado y corrección.** La primera versión pasó 67 e2e, pero una prueba adicional que fuerza una espera de bloqueo encontró un error real: PATCH recuperaba alcance/política antiguos. Esperaba `SKU-LAB-002` y la política recién confirmada, pero recibía `SKU-LAB-001` y la política anterior. Se conserva [la prueba fallida antes de corregir](experimentos/C-sol-spec/proyecto/evidencias/regresion-concurrencia-antes.txt). El agente corrigió la lectura para bloquear primero la promoción y releer después los asociados en una nueva sentencia de la misma transacción. La regresión forma parte de las 68 e2e finales aprobadas. **Es un defecto inicial corregido, no un fallo pendiente del código final de C.**
+
+**Valoración.** C dejó mayor trazabilidad y una cadena comprobable de fallo, corrección y regresión. Un solo prompt incluyó varias iteraciones internas; no fue necesaria otra instrucción del usuario. La spec ayudó a organizar el trabajo, pero no impidió por sí sola el error. [Repositorio final de C](experimentos/C-sol-spec/proyecto/src/promotions.repository.ts).
+
+## Análisis de Nemotron 3.5 Super VL Free
+
+Nemotron también entregó dos implementaciones NestJS/PostgreSQL: B directa y D con los mismos documentos preparados que C. Declaró completar y verificar las siete operaciones. La revisión repitió build, typecheck y unitarias de ambos casos: pasaron. Sus **35/37 e2e son resultados reportados por el usuario/agente**: no se encontraron logs originales conservados ni se reejecutaron esas suites completas.
+
+Se realizaron sondas independientes de HTTP y funciones de validación, sin escrituras de negocio ni correcciones de las entregas. Esas comprobaciones reprodujeron incumplimientos que las pruebas propias no detectaban. [Evidencias de la revisión](evaluacion/verificacion-nemotron/revision-nemotron.json).
+
+### Caso B — generación directa
+
+**Qué hizo.** Entregó controlador, servicio, repositorio `pg`, guard de autenticación, filtro de errores, validadores, SQL con tabla principal de 14 columnas y tres tablas asociadas, además de pruebas unitarias/e2e y README. Incluyó transacciones para las creaciones y el lote.
+
+**Resultados.** Tiempo informado: **13:06**. Build/typecheck repetidos por el evaluador: exit 0. Unitarias repetidas: **39/39**. E2E: **35/35 reportadas**, no reejecutadas en la revisión. [README de B](experimentos/B-nemotron-directo/proyecto/README.md).
+
+**Errores reproducidos.**
+- El bootstrap no configura el prefijo `/api/v1`: la solicitud contractual `GET /api/v1/promociones/no-uuid` devuelve 404 en lugar del 400 de validación esperado. Sus e2e prueban `/promociones`, por lo que no detectan el prefijo faltante.
+- Con JSON malformado sin token devuelve 400 en lugar de 401: el parser procesa el cuerpo antes de que actúe el guard, incumpliendo el orden de autenticación requerido.
+- El validador acepta el 30 de febrero y descarta una propiedad extra en `alcance` en lugar de rechazarla.
+
+**Riesgos por inspección.** PATCH lee y valida el estado antes de escribir, pero su transacción no adquiere un bloqueo `FOR UPDATE` que proteja ese ciclo. Hay riesgo de decidir modalidad/historia con un estado antiguo; no se reprodujo aquí esa carrera. El filtro genérico también devuelve `String(exception)`, que podría mostrar detalles de infraestructura; no se provocó un error con credenciales para evaluarlo.
+
+**Valoración.** B produjo una implementación que compila y supera su suite, pero «todo verificado» no equivale a conformidad integral: las sondas independientes encontraron diferencias contractuales concretas. [Sondas de B](evaluacion/verificacion-nemotron/B-probes.json).
+
+### Caso D — implementación con spec preparada
+
+**Qué hizo.** Entregó middleware de autenticación, validación, controlador/servicio/repositorio, un pool con transacciones, tabla principal de 14 columnas y tablas asociadas de alcance y política. Documentó el avance respecto a los requisitos y añadió pruebas de cierre/recreación de la aplicación.
+
+**Resultados.** Tiempo informado: **18:37**. Build/typecheck repetidos por el evaluador: exit 0. Unitarias repetidas: **44/44**. E2E: **37/37 reportadas**, no reejecutadas en la revisión. [AVANCE de D](experimentos/D-nemotron-spec/proyecto/AVANCE.md).
+
+**Errores reproducidos.**
+- Los errores de dominio añaden `timestamp` y `path`, campos que el schema `Problem` congelado no permite.
+- Con token válido y JSON malformado responde `application/json` con `message/error/statusCode` de Nest, en vez del `application/problem+json` contractual. Su filtro solo captura `ProblemError` y no normaliza el error del parser.
+- Acepta el 30 de febrero, normalizándolo al 2 de marzo, y acepta campos extra dentro de `alcance`.
+- La sonda con `vigentes=banana` no devolvió el 400 requerido: se observó 500. Por lectura, el controlador convierte valores distintos de `true` en `false`; no se atribuye aquí una causa al 500 sin evidencia adicional.
+
+D **sí** devolvió 401 antes de procesar JSON malformado cuando faltaba token; no se le atribuye el fallo de orden de autenticación observado en B.
+
+**Defecto de bloqueo por inspección.** Aunque usa `SELECT FOR UPDATE`, ejecuta esa consulta mediante `pool.query`, fuera del `client` de `withTransaction`. El bloqueo termina con la transacción implícita de esa sentencia y no protege la lectura/fusión/escritura de la transacción principal. El código demuestra el uso incorrecto del bloqueo; sus efectos concurrentes no fueron reproducidos en esta revisión.
+
+**Limitación de la evidencia de persistencia.** Su prueba cierra y recrea Nest en el mismo proceso, usando el pool global hasta el `afterAll`. No equivale a detener Node y arrancar un proceso nuevo, como en los comprobadores de Sol, ni demuestra reinicio de PostgreSQL.
+
+**Valoración.** Tener spec no eliminó las desviaciones de contrato ni garantizó un bloqueo transaccional correcto. D tardó más que B en el tiempo informado y mantuvo fallos que sus pruebas no detectaban. [Sondas de D](evaluacion/verificacion-nemotron/D-probes.json).
+
+## Comparación de lo observado
+
+- **A frente a C, dentro de Sol:** C tardó 4:28 menos y ofreció mayor trazabilidad, además de corregir el caso concurrente documentado. A pasó sus pruebas, pero no cubre ese mismo escenario.
+- **B frente a D, dentro de Nemotron:** D tardó 5:31 más. Mejoró el orden de autenticación observado en B y configuró el prefijo, pero conservó problemas de errores, validación y uso del bloqueo.
+- **A frente a B, enfoque directo:** B tardó 3:41 menos, pero las sondas encontraron diferencias contractuales que su suite no detectaba. Un tiempo menor no basta para considerar mejor una entrega.
+- **C frente a D, con spec:** C tardó 6:18 menos y dejó evidencia más completa de regresión y reinicio de proceso. Los documentos de entrada eran iguales, pero su aplicación no produjo resultados equivalentes.
+
+No se comparan cantidades de tests como si fueran la misma cobertura. Para las fuentes y límites de cada hallazgo, consultar el [informe completo](evaluacion/informe-comparativo.md).
 
 ## Prompts utilizados
 
@@ -238,3 +271,24 @@ original; un clon necesita instalar dependencias e iniciar sus propios servicios
 No se publican `.env` reales, node_modules, builds, cachés ni datos PostgreSQL. Los ejemplos usan fixtures locales.
 El código entregado se conserva sin correcciones de evaluación. Los logs públicos normalizan rutas de la máquina
 original; ver [manifiesto](docs/manifiesto-publicacion.json). [Análisis histórico A/C](evaluacion/informe-A-C.md).
+
+## ¿En qué falló la IA?
+
+La IA falló en **traducir todos los detalles del contrato y las invariantes a comportamiento verificable**, y en cubrir con sus pruebas los escenarios que podían contradecir una afirmación de éxito. Los fallos no fueron iguales ni quedaron en el mismo estado:
+
+- **Sol A:** dejó un riesgo de concurrencia sin cubrir en su suite y añadió un límite de prioridad no declarado por el contrato. No se presenta ese riesgo como una carrera ya reproducida contra A.
+- **Sol C:** su primera implementación perdía configuración bajo concurrencia. La IA detectó el error con una prueba más exigente, lo corrigió y conservó la regresión aprobada.
+- **Nemotron B:** omitió el prefijo contractual y el orden requerido de autenticación; sus validadores aceptaron entradas que debían rechazarse.
+- **Nemotron D:** aun con spec, generó errores con formato/campos distintos al contrato y usó un bloqueo que no protegía la transacción principal; también aceptó entradas inválidas.
+
+El fallo transversal fue **tomar pruebas propias aprobadas como evidencia suficiente de cumplimiento completo**. Compilar y superar una suite no descarta errores que la suite no comprueba. La documentación previa ayudó a orientar y hacer trazable el trabajo, pero no sustituyó las pruebas independientes ni la revisión humana.
+
+Los bloqueos iniciales de caché/dependencias y permisos fueron problemas del entorno, corregidos antes de estas corridas; no se cuentan como defectos funcionales de los modelos. Tampoco la ausencia de cupones/usos es un fallo: queda excluida por R09. Los hallazgos de revisión se documentaron sin corregir las implementaciones medidas.
+
+## Conclusión final
+
+En este laboratorio, **Sol C fue la entrega mejor sustentada**: tuvo el menor tiempo informado, mayor trazabilidad y evidencia de un fallo concurrente descubierto y corregido con una regresión. Sol A también entregó un API que pasó sus comprobaciones, con el riesgo concurrente y las limitaciones señaladas. Nemotron produjo código compilable y pruebas aprobadas en ambos enfoques, pero la revisión independiente encontró incumplimientos que limitan su afirmación de verificación completa.
+
+La spec **no mejoró automáticamente todos los resultados ni redujo siempre el tiempo**: Sol C fue más rápido que A, mientras Nemotron D tardó más que B y conservó fallos. La conclusión práctica es usar la IA como apoyo de implementación, mantener requisitos explícitos y validar el contrato con pruebas que puedan refutar la solución, especialmente en errores, límites y concurrencia.
+
+Estos resultados describen una muestra de una corrida por caso, con clientes distintos y tiempos informados por el equipo, sin desglose instrumentado ni suites propias equivalentes. No demuestran superioridad universal ni causalidad de un enfoque. El aprendizaje principal es **evaluar lo que el sistema hace y la evidencia que lo demuestra, no solo lo que el agente afirma haber completado**.
