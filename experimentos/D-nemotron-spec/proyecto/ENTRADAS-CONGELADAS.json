@@ -1,0 +1,13 @@
+{
+  "package.json": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+  "package-lock.json": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+  "tsconfig.json": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+  "contrato/catalogo.json": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+  "contrato/contexto.md": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+  "contrato/openapi.json": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+  "contrato/openapi.yaml": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+  "contrato/stack.md": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+  "documentos/plan.md": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+  "documentos/spec.md": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+  "documentos/tareas.md": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa"
+}

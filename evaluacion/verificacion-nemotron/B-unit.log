@@ -1,0 +1,13 @@
+
+> lab-promociones@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.2 ./experimentos/B-nemotron-directo/proyecto
+
+
+ Test Files  1 passed (1)
+      Tests  39 passed (39)
+   Start at  09:26:05
+   Duration  356ms (transform 73ms, setup 0ms, import 102ms, tests 14ms, environment 0ms)
+

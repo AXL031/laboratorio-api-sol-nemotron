@@ -785,8 +785,8 @@
     {
       "archivo": "evaluacion/README.md",
       "sha256_origen": "486b9d3938e1c451f69c4fbb6dfd7990ef57be3408bade92b5718bf66ee0e44a",
-      "sha256_publicado": "f2617efcf030976443b03f3a1338859608e8bad9c0a2359531ded63b88d2cf89",
-      "tratamiento": "índice documental adaptado a la publicación"
+      "sha256_publicado": "543285108c6f2286acb378f4d383f21670bd597e814c2559b5bfb3ef6633da66",
+      "tratamiento": "actualización editorial de alcance/análisis público; origen histórico identificado"
     },
     {
       "archivo": "evaluacion/evidencia-analisis-intento2.json",
@@ -823,6 +823,492 @@
       "sha256_origen": "e6a9c61810f24ee2ba18056f8b6923ced743e2d846fb1648ef8bdbcccd045cf9",
       "sha256_publicado": "e6a9c61810f24ee2ba18056f8b6923ced743e2d846fb1648ef8bdbcccd045cf9",
       "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/.env.example",
+      "sha256_origen": "fbf5ba0b59339a219c2b7a2ce4b6db9ee2d02aba311e2fb1b9da63166a079a59",
+      "sha256_publicado": "fbf5ba0b59339a219c2b7a2ce4b6db9ee2d02aba311e2fb1b9da63166a079a59",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/.env.test.example",
+      "sha256_origen": "e268eeb4171d8d4f82d77459f86ffb650f6fdc0e9393984b5b1009116cd2d608",
+      "sha256_publicado": "e268eeb4171d8d4f82d77459f86ffb650f6fdc0e9393984b5b1009116cd2d608",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/.gitignore",
+      "sha256_origen": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "sha256_publicado": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/.npmrc",
+      "sha256_origen": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "sha256_publicado": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/AGENTS.md",
+      "sha256_origen": "40f8f8a615db81fef6d815efcf741482477dc32e37e746d5aaae5d2e7e88293f",
+      "sha256_publicado": "40f8f8a615db81fef6d815efcf741482477dc32e37e746d5aaae5d2e7e88293f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/ENTORNO.md",
+      "sha256_origen": "700bfaddbba7028b410b64c3009eee76e71450123905f635c51fd62bec5da6b5",
+      "sha256_publicado": "700bfaddbba7028b410b64c3009eee76e71450123905f635c51fd62bec5da6b5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/ENTRADAS-CONGELADAS.json",
+      "sha256_origen": "b60a6ec75cf4b1bb0d0e667972aa3e9d6f676cc57aaf8cfbc63eebb821155aae",
+      "sha256_publicado": "b60a6ec75cf4b1bb0d0e667972aa3e9d6f676cc57aaf8cfbc63eebb821155aae",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/ENTREGA.md",
+      "sha256_origen": "df58dcd6828dbd7bf0669c49968ce69e67c7084e51a950195f4849ece984ac8b",
+      "sha256_publicado": "df58dcd6828dbd7bf0669c49968ce69e67c7084e51a950195f4849ece984ac8b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/opencode.json",
+      "sha256_origen": "3fb53bfc925bdc88da4df5543da9ede76db3312710874fbcc38dd39d058740ca",
+      "sha256_publicado": "3fb53bfc925bdc88da4df5543da9ede76db3312710874fbcc38dd39d058740ca",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/package-lock.json",
+      "sha256_origen": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "sha256_publicado": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/package.json",
+      "sha256_origen": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "sha256_publicado": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/PRECHECK-ENTORNO.json",
+      "sha256_origen": "8f3f8118857bd5b5d04d22f2bde0cef52b9c9bed0b910469c33838587483de78",
+      "sha256_publicado": "8f3f8118857bd5b5d04d22f2bde0cef52b9c9bed0b910469c33838587483de78",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/PROMPT-INICIAL.md",
+      "sha256_origen": "d0a5829b2dcd2ac45211875f55e5b2c676f79c741bf799ff21def81e3b7bbf95",
+      "sha256_publicado": "d0a5829b2dcd2ac45211875f55e5b2c676f79c741bf799ff21def81e3b7bbf95",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/README.md",
+      "sha256_origen": "14a85f97dad8eb4a48b6ef647f5c404a6e36a5ee86ccf84ddd3c648342738af7",
+      "sha256_publicado": "14a85f97dad8eb4a48b6ef647f5c404a6e36a5ee86ccf84ddd3c648342738af7",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/tsconfig.json",
+      "sha256_origen": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "sha256_publicado": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/vitest.config.ts",
+      "sha256_origen": "f890f4a27a9ade12cc6c1b2de04d3f5b5ccc75b14ac24552d323dbab6cb996de",
+      "sha256_publicado": "f890f4a27a9ade12cc6c1b2de04d3f5b5ccc75b14ac24552d323dbab6cb996de",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/vitest.e2e.config.ts",
+      "sha256_origen": "23d17ad41a2d23aea536fe561ad8bade3f889ea427e1d263ef28ed9fcad19a75",
+      "sha256_publicado": "23d17ad41a2d23aea536fe561ad8bade3f889ea427e1d263ef28ed9fcad19a75",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/app.module.ts",
+      "sha256_origen": "a01512d4b71020f8a13a866e3ebba2566e09f161709db2eba927892aef01290f",
+      "sha256_publicado": "a01512d4b71020f8a13a866e3ebba2566e09f161709db2eba927892aef01290f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/main.ts",
+      "sha256_origen": "aab2d2d18432171ca231d1ec018dfa161fa52084cd1d0891cd2dbd3af6b054d8",
+      "sha256_publicado": "aab2d2d18432171ca231d1ec018dfa161fa52084cd1d0891cd2dbd3af6b054d8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/common/auth.guard.ts",
+      "sha256_origen": "5dcfc3911bead7b5b5529065ed863d21d0968f7595d5d4c315dba93bec51891c",
+      "sha256_publicado": "5dcfc3911bead7b5b5529065ed863d21d0968f7595d5d4c315dba93bec51891c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/common/problem-exception.filter.ts",
+      "sha256_origen": "9d6eb711e3e9dd7cec32e700c626480369d57c2ec2305e0beb92feba131510af",
+      "sha256_publicado": "9d6eb711e3e9dd7cec32e700c626480369d57c2ec2305e0beb92feba131510af",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/common/problem.exception.ts",
+      "sha256_origen": "28d33dafbb3e35034a906bd37346e4082871c40c8b374a424e810bd6e2471980",
+      "sha256_publicado": "28d33dafbb3e35034a906bd37346e4082871c40c8b374a424e810bd6e2471980",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/common/validators.ts",
+      "sha256_origen": "f862a0060ac7e3f2dab0b6576a90452b010d08ac690692db9dca0edd6c930283",
+      "sha256_publicado": "f862a0060ac7e3f2dab0b6576a90452b010d08ac690692db9dca0edd6c930283",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.controller.ts",
+      "sha256_origen": "7d6984ca8bed42c675612eafe177455f1340a89d37c76d859db8d1b3d1b4c47e",
+      "sha256_publicado": "7d6984ca8bed42c675612eafe177455f1340a89d37c76d859db8d1b3d1b4c47e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.e2e-spec.ts",
+      "sha256_origen": "78d63be09209e179e431c4423ca584b39c2ce53fe6568118e2e12c5f5ff0a604",
+      "sha256_publicado": "78d63be09209e179e431c4423ca584b39c2ce53fe6568118e2e12c5f5ff0a604",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.module.ts",
+      "sha256_origen": "edbfa2ae9dcbdaf11a7d4504cdfcabfae8c50b93971ba1de08abdb9380d1165c",
+      "sha256_publicado": "edbfa2ae9dcbdaf11a7d4504cdfcabfae8c50b93971ba1de08abdb9380d1165c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.repository.ts",
+      "sha256_origen": "d7b0d45e7c864536ef5b2aa23b9ac53c47cbdeb01c06a709f372354c08de16e7",
+      "sha256_publicado": "d7b0d45e7c864536ef5b2aa23b9ac53c47cbdeb01c06a709f372354c08de16e7",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.service.ts",
+      "sha256_origen": "725d026ea3a93d965071005bffbe66b8cb9fbdee69e11cbd29d5d9c22662ea7e",
+      "sha256_publicado": "725d026ea3a93d965071005bffbe66b8cb9fbdee69e11cbd29d5d9c22662ea7e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/src/promociones/promociones.unit.spec.ts",
+      "sha256_origen": "3658545394aeb7c60f82fd374c218750d0a7e9f8cb147634a1848e244172a4da",
+      "sha256_publicado": "3658545394aeb7c60f82fd374c218750d0a7e9f8cb147634a1848e244172a4da",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/sql/01-schema.sql",
+      "sha256_origen": "75e260d57ef3cb5536cbad05e452bde575283c02d1dd73114b10dbc996cc025d",
+      "sha256_publicado": "75e260d57ef3cb5536cbad05e452bde575283c02d1dd73114b10dbc996cc025d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/herramientas/comprobar-entorno.mjs",
+      "sha256_origen": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "sha256_publicado": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/contrato/catalogo.json",
+      "sha256_origen": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "sha256_publicado": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/contrato/contexto.md",
+      "sha256_origen": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "sha256_publicado": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/contrato/openapi.json",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/contrato/openapi.yaml",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/B-nemotron-directo/proyecto/contrato/stack.md",
+      "sha256_origen": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "sha256_publicado": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/.env.example",
+      "sha256_origen": "903776ecc8647b84c9f28bcf758c984cfb2a3b257940c9273cea9eb2d9e9df29",
+      "sha256_publicado": "903776ecc8647b84c9f28bcf758c984cfb2a3b257940c9273cea9eb2d9e9df29",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/.env.test.example",
+      "sha256_origen": "88d492b2c710f25343a7ae4a3671943e7de92a333a13bee3e86a42320a8ee315",
+      "sha256_publicado": "88d492b2c710f25343a7ae4a3671943e7de92a333a13bee3e86a42320a8ee315",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/.gitignore",
+      "sha256_origen": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "sha256_publicado": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/.npmrc",
+      "sha256_origen": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "sha256_publicado": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/AGENTS.md",
+      "sha256_origen": "1a59104dde56a25f09bb337c599a748288eacdf84809e4120daf02b566bde5a9",
+      "sha256_publicado": "1a59104dde56a25f09bb337c599a748288eacdf84809e4120daf02b566bde5a9",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/AVANCE.md",
+      "sha256_origen": "5c3c6b53d3000d042c04601a1d93e608d4bd327e83fc87101b06f6228f082e70",
+      "sha256_publicado": "5c3c6b53d3000d042c04601a1d93e608d4bd327e83fc87101b06f6228f082e70",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/ENTORNO.md",
+      "sha256_origen": "d05dd2386056970d0b482bf9b2e0e1f2d7cbbb326e2beb4e736dfff823323d68",
+      "sha256_publicado": "d05dd2386056970d0b482bf9b2e0e1f2d7cbbb326e2beb4e736dfff823323d68",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/ENTRADAS-CONGELADAS.json",
+      "sha256_origen": "653a9f3ab3f636922b5062b6b078d67a43105bcddaea307301566c715819947c",
+      "sha256_publicado": "653a9f3ab3f636922b5062b6b078d67a43105bcddaea307301566c715819947c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/ENTREGA.md",
+      "sha256_origen": "349f2d7f67e6eef7a90124bbc2ceb5414b104671b7c8ed0512a6c0baf3fba46c",
+      "sha256_publicado": "349f2d7f67e6eef7a90124bbc2ceb5414b104671b7c8ed0512a6c0baf3fba46c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/opencode.json",
+      "sha256_origen": "3fb53bfc925bdc88da4df5543da9ede76db3312710874fbcc38dd39d058740ca",
+      "sha256_publicado": "3fb53bfc925bdc88da4df5543da9ede76db3312710874fbcc38dd39d058740ca",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/package-lock.json",
+      "sha256_origen": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "sha256_publicado": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/package.json",
+      "sha256_origen": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "sha256_publicado": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/PRECHECK-ENTORNO.json",
+      "sha256_origen": "b0b146ca64f5f6fed7944ba04a365fa12a03939a1a16fe156da92907e7bfcaf2",
+      "sha256_publicado": "b0b146ca64f5f6fed7944ba04a365fa12a03939a1a16fe156da92907e7bfcaf2",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/PROMPT-INICIAL.md",
+      "sha256_origen": "98ba2a2a51a4016220eaef05fdca1c31b653226801d2d09d9a04ad5d37cbccbf",
+      "sha256_publicado": "98ba2a2a51a4016220eaef05fdca1c31b653226801d2d09d9a04ad5d37cbccbf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/README.md",
+      "sha256_origen": "0a5bac291b8e1392d28d15fab4b5181935a5e1dce9605a6930508a0e9f466a9f",
+      "sha256_publicado": "0a5bac291b8e1392d28d15fab4b5181935a5e1dce9605a6930508a0e9f466a9f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/tsconfig.json",
+      "sha256_origen": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "sha256_publicado": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/vitest.config.ts",
+      "sha256_origen": "9f2aaf59315fac6e1e0a85de75c9e7f3e2774e9178766326aa2115fb3faf79e4",
+      "sha256_publicado": "9f2aaf59315fac6e1e0a85de75c9e7f3e2774e9178766326aa2115fb3faf79e4",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/vitest.e2e.config.ts",
+      "sha256_origen": "b11db244f0d48ba1fe02df6c1d5aaf69646d17dcc1d01f88658be60749bfb579",
+      "sha256_publicado": "b11db244f0d48ba1fe02df6c1d5aaf69646d17dcc1d01f88658be60749bfb579",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/app.module.ts",
+      "sha256_origen": "44f3133d539f11df75775c5f677862ad6854c0d87b5109e1d23fa7cef6ff7cc0",
+      "sha256_publicado": "44f3133d539f11df75775c5f677862ad6854c0d87b5109e1d23fa7cef6ff7cc0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/main.ts",
+      "sha256_origen": "5832552bee3b58906f10b3115aede421d429881ce3c7c9519c1d47a55197b127",
+      "sha256_publicado": "5832552bee3b58906f10b3115aede421d429881ce3c7c9519c1d47a55197b127",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/auth/auth.middleware.ts",
+      "sha256_origen": "eeadf59caa06e29225af5bfe28589c642241c3aaa81030c2d460a230ad0199d2",
+      "sha256_publicado": "eeadf59caa06e29225af5bfe28589c642241c3aaa81030c2d460a230ad0199d2",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/common/problem-exception.filter.ts",
+      "sha256_origen": "e37dcd5fca7b45ecb7f23bfdd6968c0fd5fed8db70a6054578952b9a0176d660",
+      "sha256_publicado": "e37dcd5fca7b45ecb7f23bfdd6968c0fd5fed8db70a6054578952b9a0176d660",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/common/problem.ts",
+      "sha256_origen": "d6ec6d6587de2a0bf2d728b58189da6e7255e437b9133ced422d639f4d13ad88",
+      "sha256_publicado": "d6ec6d6587de2a0bf2d728b58189da6e7255e437b9133ced422d639f4d13ad88",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/common/validation.ts",
+      "sha256_origen": "4881f7c38604ed1682434fe3401d4280bb841629060f8710c85044456feb2856",
+      "sha256_publicado": "4881f7c38604ed1682434fe3401d4280bb841629060f8710c85044456feb2856",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/db/pool.ts",
+      "sha256_origen": "cc94edaac0cb4124b2fd5f09b0e2b838422325a9d27a15342a3e31f3db7ccad1",
+      "sha256_publicado": "cc94edaac0cb4124b2fd5f09b0e2b838422325a9d27a15342a3e31f3db7ccad1",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/promociones.controller.ts",
+      "sha256_origen": "bd54212d6a215fe20a278db3432950e5328380f7b5cd1beb1cd4e9d15d4d5ec9",
+      "sha256_publicado": "bd54212d6a215fe20a278db3432950e5328380f7b5cd1beb1cd4e9d15d4d5ec9",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/promociones.module.ts",
+      "sha256_origen": "abdc770d014c95b18f1aa5663f3ba4e5ca110a178f2076efdb8ce112a4387ea8",
+      "sha256_publicado": "abdc770d014c95b18f1aa5663f3ba4e5ca110a178f2076efdb8ce112a4387ea8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/promociones.repository.ts",
+      "sha256_origen": "9d385dd8feb7f1716a0aaa4d38379e7d476ad3f5484b89555690ab1d7f964ff5",
+      "sha256_publicado": "9d385dd8feb7f1716a0aaa4d38379e7d476ad3f5484b89555690ab1d7f964ff5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/promociones.service.ts",
+      "sha256_origen": "8622e38544c00354f7f8c19a06925f9f6b668752a5e6c4aeb441b169b8beba20",
+      "sha256_publicado": "8622e38544c00354f7f8c19a06925f9f6b668752a5e6c4aeb441b169b8beba20",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/dto/create-promocion.dto.ts",
+      "sha256_origen": "0d2eb70f3481a8f4a49a2e4a25e2020732dcebd39bd9bd03ecc56560a8e8e14c",
+      "sha256_publicado": "0d2eb70f3481a8f4a49a2e4a25e2020732dcebd39bd9bd03ecc56560a8e8e14c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/dto/lote-create.dto.ts",
+      "sha256_origen": "e9e1d9c5f06cabf473d3320bafd121dc24b660137e02de5e21dfe87433c62851",
+      "sha256_publicado": "e9e1d9c5f06cabf473d3320bafd121dc24b660137e02de5e21dfe87433c62851",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/dto/patch-promocion.dto.ts",
+      "sha256_origen": "731bdbe4f7f228ddfc39b255f9bccb1fc9e0343067dbc363da3403a4fcb9311c",
+      "sha256_publicado": "731bdbe4f7f228ddfc39b255f9bccb1fc9e0343067dbc363da3403a4fcb9311c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/src/promociones/entities/promocion.entity.ts",
+      "sha256_origen": "942960117283fc6583174fdb4d76430c281db2f5666308849d1a02e1f29f8216",
+      "sha256_publicado": "942960117283fc6583174fdb4d76430c281db2f5666308849d1a02e1f29f8216",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/sql/001_inicial.sql",
+      "sha256_origen": "b301415e1f34a0071c9f478ba35b55ccbeaefaf82060f98241de6a21a448b11a",
+      "sha256_publicado": "b301415e1f34a0071c9f478ba35b55ccbeaefaf82060f98241de6a21a448b11a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/test/e2e/promociones.e2e.spec.ts",
+      "sha256_origen": "496944630c301db65d16fd2653dfdf4c1815a8cdeadf023a61081b99cbb6b992",
+      "sha256_publicado": "496944630c301db65d16fd2653dfdf4c1815a8cdeadf023a61081b99cbb6b992",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/test/unit/validation.spec.ts",
+      "sha256_origen": "9ba1638954143d811ec61cfc238f9aaed64481283dec888e8733e4448ce4259e",
+      "sha256_publicado": "9ba1638954143d811ec61cfc238f9aaed64481283dec888e8733e4448ce4259e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/herramientas/comprobar-entorno.mjs",
+      "sha256_origen": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "sha256_publicado": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/contrato/catalogo.json",
+      "sha256_origen": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "sha256_publicado": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/contrato/contexto.md",
+      "sha256_origen": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "sha256_publicado": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/contrato/openapi.json",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/contrato/openapi.yaml",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/contrato/stack.md",
+      "sha256_origen": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "sha256_publicado": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/documentos/plan.md",
+      "sha256_origen": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "sha256_publicado": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/documentos/spec.md",
+      "sha256_origen": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "sha256_publicado": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/D-nemotron-spec/proyecto/documentos/tareas.md",
+      "sha256_origen": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "sha256_publicado": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "tratamiento": "copia exacta"
     }
   ],
   "exclusiones": [
@@ -836,5 +1322,6 @@
     "caches",
     "fuentes originales completas"
   ],
-  "ejecuciones_modelo_en_publicacion": false
+  "ejecuciones_modelo_en_publicacion": false,
+  "actualizacion": "Cuatro entregas y tiempos del usuario; verificación independiente Nemotron separada"
 }

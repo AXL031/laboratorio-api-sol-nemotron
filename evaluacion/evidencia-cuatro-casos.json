@@ -1,0 +1,379 @@
+{
+  "fecha": "2026-11-14",
+  "entradas_contra_base": {
+    "A": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true
+    },
+    "B": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true
+    },
+    "C": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "documentos/plan.md": true,
+      "documentos/spec.md": true,
+      "documentos/tareas.md": true
+    },
+    "D": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "documentos/plan.md": true,
+      "documentos/spec.md": true,
+      "documentos/tareas.md": true
+    }
+  },
+  "prompts_normalizados_iguales": {
+    "A_B": true,
+    "C_D": true
+  },
+  "resultados_declarados": {
+    "A": {
+      "unit": 87,
+      "e2e": 59
+    },
+    "C": {
+      "unit": 91,
+      "e2e": 68
+    },
+    "B": {
+      "unit": 39,
+      "e2e": 35
+    },
+    "D": {
+      "unit": 44,
+      "e2e": 37
+    }
+  },
+  "verificacion_independiente_Nemotron": {
+    "B": {
+      "comandos": {
+        "build": {
+          "exit": 0,
+          "log": "B-build.log"
+        },
+        "typecheck": {
+          "exit": 0,
+          "log": "B-typecheck.log"
+        },
+        "unit": {
+          "exit": 0,
+          "log": "B-unit.log"
+        }
+      },
+      "verificacion_puntual": {
+        "case": "B",
+        "tipo": "Verificación independiente puntual y sin escrituras de negocio; bootstrap replicado del main con puerto efímero",
+        "checks": [
+          {
+            "name": "Prefijo contractual con UUID inválido",
+            "path": "/api/v1/promociones/no-uuid",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION"
+            },
+            "observed": {
+              "status": 404,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 404,
+                "code": "VALIDACION",
+                "title": "Cannot GET /api/v1/promociones/no-uuid"
+              }
+            }
+          },
+          {
+            "name": "JSON malformado sin token: auth antes del parser",
+            "path": "/promociones",
+            "expected": {
+              "status": 401,
+              "code": "NO_AUTENTICADO"
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 400,
+                "code": "VALIDACION",
+                "title": "Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+              }
+            }
+          },
+          {
+            "name": "JSON malformado autenticado: Problem contractual",
+            "path": "/promociones",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION",
+              "contentType": "application/problem+json",
+              "allowedFields": [
+                "status",
+                "code",
+                "title",
+                "detail"
+              ]
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 400,
+                "code": "VALIDACION",
+                "title": "Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+              }
+            }
+          },
+          {
+            "name": "Error por UUID inválido: campos permitidos",
+            "path": "/promociones/no-uuid",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION",
+              "allowedFields": [
+                "status",
+                "code",
+                "title",
+                "detail"
+              ]
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 400,
+                "code": "VALIDACION",
+                "title": "Validación fallida",
+                "detail": "promocionId debe ser un UUID válido"
+              }
+            }
+          },
+          {
+            "name": "Fecha imposible 30 de febrero",
+            "input": "2026-02-30T00:00:00Z",
+            "expected": "rechazar",
+            "observed": true
+          },
+          {
+            "name": "Propiedad extra en alcance",
+            "input": {
+              "skus": [
+                "SKU-LAB-001"
+              ],
+              "intruso": true
+            },
+            "expected": "rechazar 422",
+            "observed": {
+              "accepted": true,
+              "result": {
+                "skus": [
+                  "SKU-LAB-001"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "fuentes_sin_cambios": true,
+      "e2e_completa": "NO_REEJECUTADA; cifras de respuesta del usuario"
+    },
+    "D": {
+      "comandos": {
+        "build": {
+          "exit": 0,
+          "log": "D-build.log"
+        },
+        "typecheck": {
+          "exit": 0,
+          "log": "D-typecheck.log"
+        },
+        "unit": {
+          "exit": 0,
+          "log": "D-unit.log"
+        }
+      },
+      "verificacion_puntual": {
+        "case": "D",
+        "tipo": "Verificación independiente puntual y sin escrituras de negocio; bootstrap replicado del main con puerto efímero",
+        "checks": [
+          {
+            "name": "Prefijo contractual con UUID inválido",
+            "path": "/api/v1/promociones/no-uuid",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION"
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 400,
+                "code": "VALIDACION",
+                "title": "El campo promocionId no es un UUID válido",
+                "timestamp": "2026-11-14T14:26:17.481Z",
+                "path": "/api/v1/promociones/no-uuid"
+              }
+            }
+          },
+          {
+            "name": "JSON malformado sin token: auth antes del parser",
+            "path": "/api/v1/promociones",
+            "expected": {
+              "status": 401,
+              "code": "NO_AUTENTICADO"
+            },
+            "observed": {
+              "status": 401,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 401,
+                "code": "NO_AUTENTICADO",
+                "title": "No autenticado",
+                "detail": "Falta el encabezado Authorization Bearer"
+              }
+            }
+          },
+          {
+            "name": "JSON malformado autenticado: Problem contractual",
+            "path": "/api/v1/promociones",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION",
+              "contentType": "application/problem+json",
+              "allowedFields": [
+                "status",
+                "code",
+                "title",
+                "detail"
+              ]
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/json; charset=utf-8",
+              "body": {
+                "message": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+                "error": "Bad Request",
+                "statusCode": 400
+              }
+            }
+          },
+          {
+            "name": "Error por UUID inválido: campos permitidos",
+            "path": "/api/v1/promociones/no-uuid",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION",
+              "allowedFields": [
+                "status",
+                "code",
+                "title",
+                "detail"
+              ]
+            },
+            "observed": {
+              "status": 400,
+              "contentType": "application/problem+json; charset=utf-8",
+              "body": {
+                "status": 400,
+                "code": "VALIDACION",
+                "title": "El campo promocionId no es un UUID válido",
+                "timestamp": "2026-11-14T14:26:17.526Z",
+                "path": "/api/v1/promociones/no-uuid"
+              }
+            }
+          },
+          {
+            "name": "vigentes inválido no debe aceptarse",
+            "path": "/api/v1/promociones?canal=MARKETPLACE&vigentes=banana",
+            "expected": {
+              "status": 400,
+              "code": "VALIDACION"
+            },
+            "observed": {
+              "status": 500,
+              "contentType": "application/json; charset=utf-8",
+              "body": {
+                "statusCode": 500,
+                "message": "Internal server error"
+              }
+            }
+          },
+          {
+            "name": "Fecha imposible 30 de febrero",
+            "input": "2026-02-30T00:00:00Z",
+            "expected": "rechazar",
+            "observed": "2026-03-02T00:00:00.000Z"
+          },
+          {
+            "name": "Propiedad extra en alcance",
+            "input": {
+              "skus": [
+                "SKU-LAB-001"
+              ],
+              "intruso": true
+            },
+            "expected": "rechazar 422",
+            "observed": {
+              "accepted": true,
+              "result": {
+                "skus": [
+                  "SKU-LAB-001"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "fuentes_sin_cambios": true,
+      "e2e_completa": "NO_REEJECUTADA; cifras de respuesta del usuario"
+    }
+  },
+  "e2e_Nemotron": "Declaradas por usuario/agente, no reejecutadas ni logs originales conservados encontrados en la revisión",
+  "tiempos": {
+    "unidad": "minutos:segundos",
+    "fuente": "Tiempos comunicados por el usuario, no extraídos de Vitest; no se proporcionó desglose de generación/pruebas/esperas",
+    "casos": {
+      "A": {
+        "tiempo": "16:47",
+        "segundos": 1007
+      },
+      "C": {
+        "tiempo": "12:19",
+        "segundos": 739
+      },
+      "B": {
+        "tiempo": "13:06",
+        "segundos": 786
+      },
+      "D": {
+        "tiempo": "18:37",
+        "segundos": 1117
+      }
+    }
+  },
+  "codigo_sin_correcciones": true
+}

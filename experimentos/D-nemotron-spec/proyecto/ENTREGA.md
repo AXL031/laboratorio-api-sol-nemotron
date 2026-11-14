@@ -1,4 +1,4 @@
-# Entrega del segundo intento — Nemotron 3.5 Super VL Free
+# Entrega de Nemotron 3.5 Super VL Free — spec
 
 Implementar las siete operaciones de contrato/openapi.yaml y las reglas de contrato/contexto.md.
 PostgreSQL y dependencias ya preparados: leer ENTORNO.md y ejecutar herramientas/comprobar-entorno.mjs.

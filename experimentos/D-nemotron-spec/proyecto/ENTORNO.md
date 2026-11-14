@@ -1,11 +1,18 @@
-# Preparación de Nemotron — D-nemotron-spec
+# Entorno de Nemotron 3.5 Super VL Free — caso D-nemotron-spec
 
-Este proyecto público contiene entradas iniciales; no incluye trabajo en curso ni resultados de Nemotron.
-Modelo: opencode/nemotron-3.5-super-vl-free. Un chat nuevo y un solo prompt por caso.
-Ejecutar desde la raíz del clon docker compose -f nemotron/infra/compose.yaml up -d --wait,
-usando la imagen por digest indicada en el README principal, disponible tras docker pull.
-Copiar .env.example a .env y .env.test.example a .env.test, ejecutar npm ci y después
-node herramientas/comprobar-entorno.mjs antes de enviar el prompt.
-PostgreSQL local 55437; bases separadas lab_promociones y lab_promociones_test. HTTP 3304.
-Las dependencias y reglas corresponden a la misma base de Sol. El agente debe crear su propio API y SQL.
-Los permisos de terminal/sandbox siguen gobernados por el cliente. No usar datos ni servicios externos de negocio.
+Modelo OpenCode: opencode/nemotron-3.5-super-vl-free. Usar chat nuevo y seleccionar el modelo antes de enviar el único prompt.
+Solo se preparó infraestructura; el modelo todavía no fue ejecutado y no existe implementación.
+HTTP local: 3304. PostgreSQL local: 127.0.0.1:55437.
+DB aplicación: lab_promociones. DB e2e: lab_promociones_test.
+.env/.env.test contienen únicamente fixtures locales. Las bases empiezan sin tablas de negocio.
+
+Misma base, versiones exactas, lock, reglas, catálogo y OpenAPI que los casos Sol, sin copiar sus soluciones.
+documentos/ tiene copias EXACTAS de la spec/plan/tareas de entrada de Sol. Sus etiquetas históricas se refieren a la procedencia; el modelo actual es Nemotron. No regenerar ni editar esos archivos.
+No leer carpetas de Sol ni otros casos, informes, respuestas o pruebas ajenas.
+
+Preflight: node herramientas/comprobar-entorno.mjs.
+Dependencias instaladas antes de la corrida. Restaurar con npm ci --no-audit --no-fund si se necesitan;
+no imponer --offline. npm start carga .env y npm run test:e2e carga .env.test.
+Si Docker se cierra: ejecutar nemotron/herramientas/arrancar-postgres.ps1 desde la raíz del laboratorio.
+No usar los contenedores de Sol ni sus puertos; no borrar volúmenes.
+Los permisos del cliente siguen aplicándose. Un preflight no equivale a pruebas del API.

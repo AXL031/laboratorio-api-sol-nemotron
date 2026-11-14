@@ -1,7 +1,10 @@
-# B-nemotron-directo — entradas de Nemotron
+# B-nemotron-directo — Nemotron 3.5 Super VL Free
 
-Modelo: opencode/nemotron-3.5-super-vl-free. Un solo prompt por caso, sin delegación.
-Trabajar solo en esta carpeta; no leer ni copiar código, respuestas ni pruebas de Sol u otros casos.
+Modelo asignado: opencode/nemotron-3.5-super-vl-free. El usuario confirmó el nombre comercial; registrar el alias real de la sesión.
+Un solo prompt: implementar y verificar completo, sin esperar otro mensaje para continuar.
+Trabajar solo en esta carpeta proyecto. No leer ni copiar otros casos, respuestas previas o código Sol.
 contrato/, package.json, package-lock.json y tsconfig.json son entradas congeladas.
-Enfoque directo: no generar spec/plan/tareas como fase previa.
-Preparar el entorno según ENTORNO.md. No inventar resultados ni modificar evidencia histórica.
+No generar spec/plan/tareas formales como fase previa.
+Dependencias ya instaladas; npm ci permitido, sin obligación offline. DB local y puertos en ENTORNO.md.
+Respetar permisos del cliente y registrar bloqueos reales. No delegar en otros modelos, desplegar
+ni usar servicios de negocio externos. No atribuir el preflight a pruebas del API propio.

@@ -2,7 +2,12 @@
   "caso": "D-nemotron-spec",
   "modelo": "Nemotron 3.5 Super VL Free",
   "model_id": "opencode/nemotron-3.5-super-vl-free",
-  "estado_publicacion": "ENTRADAS_INICIALES; RESULTADOS_PENDIENTES",
-  "enfoque": "spec preparada",
-  "cantidad_prompts_prevista": 1
+  "estado": "ENTREGA_RECIBIDA_Y_REVISADA_CON_HALLAZGOS",
+  "tiempo_usuario_mm_ss": "18:37",
+  "unitarias_reportadas": 44,
+  "e2e_reportadas_por_usuario": 37,
+  "unitarias_repetidas_por_evaluador": 44,
+  "e2e_repetidas_por_evaluador": false,
+  "entradas_actuales_contra_base": "PASS",
+  "informe": "evaluacion/informe-comparativo.md"
 }

@@ -1,5 +1,7 @@
-# Evaluación publicada
+# Evaluación de cuatro entregas
 
-Informe actual: [informe-A-C.md](informe-A-C.md). Resultados solo de Sol.
-Los archivos evidencia-analisis-intento2.json y snapshot-intento2.json conservan trazabilidad del segundo intento.
-Los resultados de Nemotron quedan pendientes de publicación. El historial local descartado no forma parte de esta publicación.
+Informe vigente: [informe-comparativo.md](informe-comparativo.md).
+[Tiempos del usuario](tiempos.json) y [evidencia estructurada](evidencia-cuatro-casos.json).
+Sondas/build/tipos/unitarias del evaluador: verificacion-nemotron/.
+El informe-A-C.md es el análisis previo de Sol; las limitaciones de la nueva comparación están en el vigente.
+No se reejecutaron las e2e completas de Nemotron; sus cantidades son las reportadas por usuario/agente.

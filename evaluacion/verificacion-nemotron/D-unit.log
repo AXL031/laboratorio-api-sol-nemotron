@@ -1,0 +1,13 @@
+
+> lab-promociones@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.2 ./experimentos/D-nemotron-spec/proyecto
+
+
+ Test Files  1 passed (1)
+      Tests  44 passed (44)
+   Start at  09:26:15
+   Duration  468ms (transform 84ms, setup 0ms, import 120ms, tests 13ms, environment 0ms)
+

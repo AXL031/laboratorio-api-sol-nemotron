@@ -1,0 +1,51 @@
+{
+  "tipo": "preflight de entorno; no pruebas del API generado",
+  "fecha": "2026-11-14T14:04:28.043Z",
+  "checks": [
+    {
+      "name": "Node",
+      "estado": "PASS",
+      "detail": "v24.21.0"
+    },
+    {
+      "name": "TypeScript",
+      "estado": "PASS",
+      "detail": "Version 6.0.2"
+    },
+    {
+      "name": "Vitest",
+      "estado": "PASS",
+      "detail": "vitest/4.1.2 win32-x64 node-v24.21.0"
+    },
+    {
+      "name": "Imports Nest/pg",
+      "estado": "PASS",
+      "detail": "Dependencias resueltas desde el proyecto"
+    },
+    {
+      "name": "PostgreSQL aplicación",
+      "estado": "PASS",
+      "detail": {
+        "db": "lab_promociones",
+        "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+        "escritura_temporal_revertida": true
+      }
+    },
+    {
+      "name": "PostgreSQL e2e",
+      "estado": "PASS",
+      "detail": {
+        "db": "lab_promociones_test",
+        "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+        "escritura_temporal_revertida": true
+      }
+    },
+    {
+      "name": "Puerto HTTP libre",
+      "estado": "PASS",
+      "detail": 3304
+    }
+  ],
+  "package_lock_sha256": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+  "estado": "PASS"
+}

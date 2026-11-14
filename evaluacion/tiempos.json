@@ -1,0 +1,22 @@
+{
+  "unidad": "minutos:segundos",
+  "fuente": "Tiempos comunicados por el usuario, no extraídos de Vitest; no se proporcionó desglose de generación/pruebas/esperas",
+  "casos": {
+    "A": {
+      "tiempo": "16:47",
+      "segundos": 1007
+    },
+    "C": {
+      "tiempo": "12:19",
+      "segundos": 739
+    },
+    "B": {
+      "tiempo": "13:06",
+      "segundos": 786
+    },
+    "D": {
+      "tiempo": "18:37",
+      "segundos": 1117
+    }
+  }
+}

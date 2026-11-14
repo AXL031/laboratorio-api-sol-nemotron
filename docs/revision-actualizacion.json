@@ -1,0 +1,56 @@
+{
+  "estado": "PASS",
+  "prompts_iguales_salvo_modelo": true,
+  "entradas_contra_base": {
+    "A": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true
+    },
+    "B": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true
+    },
+    "C": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "documentos/plan.md": true,
+      "documentos/spec.md": true,
+      "documentos/tareas.md": true
+    },
+    "D": {
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "documentos/plan.md": true,
+      "documentos/spec.md": true,
+      "documentos/tareas.md": true
+    }
+  },
+  "codigo_original_sin_modificar": true,
+  "enlaces_rotos": [],
+  "patrones_credenciales": [],
+  "verificacion_Nemotron": "Build/tipos/unitarias repetidos; sondas sin datos de negocio; e2e completas no repetidas"
+}
