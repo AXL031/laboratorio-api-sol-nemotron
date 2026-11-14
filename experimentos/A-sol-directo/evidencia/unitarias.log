@@ -1,0 +1,13 @@
+
+> lab-promociones@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.2 ./experimentos/A-sol-directo/proyecto
+
+
+ Test Files  1 passed (1)
+      Tests  87 passed (87)
+   Start at  07:56:08
+   Duration  2.82s (transform 251ms, setup 0ms, import 1.79s, tests 44ms, environment 0ms)
+

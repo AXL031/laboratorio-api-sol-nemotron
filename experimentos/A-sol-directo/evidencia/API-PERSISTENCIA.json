@@ -1,0 +1,233 @@
+{
+  "fecha": "2026-11-14T12:54:23.231Z",
+  "tipo": "Pruebas HTTP del API compilado y persistencia entre procesos",
+  "base": "lab_promociones",
+  "checks": [
+    {
+      "name": "POST /promociones",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 201,
+        "promotionId": "343e47d0-7827-4b52-a31d-6a9b213be13b"
+      }
+    },
+    {
+      "name": "POST /promociones/lote",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 201,
+        "ids": [
+          "657d3659-0d94-47a8-99c8-e387eb6ba22a",
+          "1477776c-145b-4ca4-ae48-eeb8f4ca0b5a"
+        ]
+      }
+    },
+    {
+      "name": "GET /promociones/administracion",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "meta": {
+          "pagina": 1,
+          "tamanio": 100,
+          "total": 3,
+          "totalPaginas": 1
+        }
+      }
+    },
+    {
+      "name": "GET /promociones",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "ids": [
+          "343e47d0-7827-4b52-a31d-6a9b213be13b",
+          "657d3659-0d94-47a8-99c8-e387eb6ba22a",
+          "1477776c-145b-4ca4-ae48-eeb8f4ca0b5a"
+        ]
+      }
+    },
+    {
+      "name": "GET /promociones/{promocionId}",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "body": {
+          "promotionId": "343e47d0-7827-4b52-a31d-6a9b213be13b",
+          "nombre": "Evidencia 7a00deae-394e-4700-86d3-62667da75b90",
+          "tipoDescuento": "PORCENTAJE",
+          "valor": 12,
+          "modalidad": "AUTOMATICA",
+          "estado": "ACTIVO",
+          "validFrom": "2020-01-01T00:00:00.000Z",
+          "validUntil": "2099-01-01T00:00:00.000Z",
+          "alcance": {
+            "skus": [
+              "SKU-LAB-002"
+            ],
+            "productIds": [
+              "PRD-LAB-001"
+            ]
+          },
+          "prioridad": 2,
+          "canalesHabilitados": [
+            "MARKETPLACE"
+          ],
+          "politicaCombinacion": {
+            "cupon": true,
+            "ofertaPricing": false,
+            "promocionAutomatica": false
+          },
+          "puedeCambiarModalidad": false
+        }
+      }
+    },
+    {
+      "name": "PATCH /promociones/{promocionId}",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "body": {
+          "promotionId": "343e47d0-7827-4b52-a31d-6a9b213be13b",
+          "nombre": "Evidencia 7a00deae-394e-4700-86d3-62667da75b90 persistida",
+          "tipoDescuento": "PORCENTAJE",
+          "valor": 12,
+          "modalidad": "AUTOMATICA",
+          "estado": "INACTIVO",
+          "validFrom": "2020-01-01T00:00:00.000Z",
+          "validUntil": "2099-01-01T00:00:00.000Z",
+          "alcance": {
+            "skus": [
+              "SKU-LAB-002"
+            ],
+            "productIds": [
+              "PRD-LAB-001"
+            ]
+          },
+          "prioridad": 2,
+          "canalesHabilitados": [
+            "MARKETPLACE"
+          ],
+          "politicaCombinacion": {
+            "cupon": true,
+            "ofertaPricing": false,
+            "promocionAutomatica": false
+          },
+          "puedeCambiarModalidad": false
+        }
+      }
+    },
+    {
+      "name": "Persistencia tras reinicio de proceso Node",
+      "estado": "PASS",
+      "evidencia": {
+        "promotionId": "343e47d0-7827-4b52-a31d-6a9b213be13b",
+        "procesos": [
+          18692,
+          17588
+        ],
+        "first_activated_at": "2026-11-14T12:54:25.000Z",
+        "registroConservado": true
+      }
+    },
+    {
+      "name": "Activación histórica sobrevive reinicio",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 409,
+        "body": {
+          "status": 409,
+          "code": "MODALIDAD_BLOQUEADA",
+          "title": "No se puede cambiar la modalidad"
+        },
+        "text": "{\"status\":409,\"code\":\"MODALIDAD_BLOQUEADA\",\"title\":\"No se puede cambiar la modalidad\"}",
+        "contentType": "application/problem+json; charset=utf-8"
+      }
+    },
+    {
+      "name": "DELETE /promociones/{promocionId}",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 204,
+        "promotionId": "657d3659-0d94-47a8-99c8-e387eb6ba22a",
+        "cuerpo": ""
+      }
+    },
+    {
+      "name": "Repetir DELETE",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 404,
+        "body": {
+          "status": 404,
+          "code": "PROMOCION_NO_ENCONTRADA",
+          "title": "Promoción no encontrada"
+        },
+        "text": "{\"status\":404,\"code\":\"PROMOCION_NO_ENCONTRADA\",\"title\":\"Promoción no encontrada\"}",
+        "contentType": "application/problem+json; charset=utf-8"
+      }
+    },
+    {
+      "name": "DELETE /promociones/{promocionId}",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 204,
+        "promotionId": "1477776c-145b-4ca4-ae48-eeb8f4ca0b5a",
+        "cuerpo": ""
+      }
+    },
+    {
+      "name": "Repetir DELETE",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 404,
+        "body": {
+          "status": 404,
+          "code": "PROMOCION_NO_ENCONTRADA",
+          "title": "Promoción no encontrada"
+        },
+        "text": "{\"status\":404,\"code\":\"PROMOCION_NO_ENCONTRADA\",\"title\":\"Promoción no encontrada\"}",
+        "contentType": "application/problem+json; charset=utf-8"
+      }
+    },
+    {
+      "name": "14 columnas físicas y configuración asociada",
+      "estado": "PASS",
+      "evidencia": {
+        "columnas": [
+          "id",
+          "name",
+          "discount_type",
+          "discount_value",
+          "modality",
+          "state",
+          "valid_from",
+          "valid_until",
+          "priority",
+          "enabled_channels",
+          "first_activated_at",
+          "created_at",
+          "updated_at",
+          "deleted_at"
+        ],
+        "persistida": "343e47d0-7827-4b52-a31d-6a9b213be13b"
+      }
+    }
+  ],
+  "procesos": [
+    18692,
+    17588
+  ],
+  "inputs": {
+    "contrato/openapi.yaml": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+    "contrato/openapi.json": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+    "contrato/contexto.md": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+    "contrato/catalogo.json": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+    "ENTREGA.md": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+    "ENTORNO.md": "2cfa75e3b14b93c6e6dc400a5456dd3a2d88adac7d2bce0e83a6c1a885cd56a0",
+    "package.json": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+    "package-lock.json": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+    "tsconfig.json": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84"
+  },
+  "estado": "PASS"
+}

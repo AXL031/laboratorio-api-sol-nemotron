@@ -1,0 +1,117 @@
+{
+  "tipo": "API propio: siete operaciones HTTP y reinicio de proceso real",
+  "fecha": "2026-11-14T13:12:47.421Z",
+  "checks": [
+    {
+      "nombre": "Migración reproducible sin borrar datos",
+      "estado": "PASS",
+      "evidencia": {
+        "estado": "ya aplicada"
+      }
+    },
+    {
+      "nombre": "O01 POST promoción",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 201,
+        "promotionId": "13ff2d7f-7929-4708-b501-8e664543901e",
+        "base": "lab_promociones"
+      }
+    },
+    {
+      "nombre": "O02 POST lote",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 201,
+        "elementos": 2
+      }
+    },
+    {
+      "nombre": "O03 PATCH y antecedente",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "first_activated_at": "2026-11-14T13:12:49.701Z",
+        "puedeCambiarModalidad": false
+      }
+    },
+    {
+      "nombre": "O05 GET comercial con lector",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "contieneId": true
+      }
+    },
+    {
+      "nombre": "O06 GET administración con lector",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "meta": {
+          "pagina": 1,
+          "tamanio": 1,
+          "total": 4,
+          "totalPaginas": 4
+        }
+      }
+    },
+    {
+      "nombre": "O07 GET detalle",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 200,
+        "promotionId": "13ff2d7f-7929-4708-b501-8e664543901e"
+      }
+    },
+    {
+      "nombre": "O04 DELETE lógico",
+      "estado": "PASS",
+      "evidencia": {
+        "status": 204,
+        "cuerpo": "vacío",
+        "posterior": 404
+      }
+    },
+    {
+      "nombre": "Persistencia tras reinicio de proceso",
+      "estado": "PASS",
+      "evidencia": {
+        "pidAntes": 25116,
+        "pidDespues": 7188,
+        "promotionId": "13ff2d7f-7929-4708-b501-8e664543901e",
+        "detalleIdentico": true,
+        "antecedenteIdentico": true,
+        "cambioModalidad": 409
+      }
+    },
+    {
+      "nombre": "Modelo físico",
+      "estado": "PASS",
+      "evidencia": {
+        "columnas": [
+          "id",
+          "name",
+          "discount_type",
+          "discount_value",
+          "modality",
+          "state",
+          "valid_from",
+          "valid_until",
+          "priority",
+          "enabled_channels",
+          "first_activated_at",
+          "created_at",
+          "updated_at",
+          "deleted_at"
+        ],
+        "cantidad": 14
+      }
+    }
+  ],
+  "estado": "PASS",
+  "postgresql": {
+    "base": "lab_promociones",
+    "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit"
+  }
+}

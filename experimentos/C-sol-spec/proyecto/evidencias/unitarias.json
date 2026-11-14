@@ -1,0 +1,1132 @@
+{
+  "numTotalTestSuites": 4,
+  "numPassedTestSuites": 4,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 91,
+  "numPassedTests": 91,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1794661924197,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos acepta ambos tipos, porcentaje 100 y devuelve una copia",
+          "status": "passed",
+          "title": "acepta ambos tipos, porcentaje 100 y devuelve una copia",
+          "duration": 3.5271000000000186,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza nombre vacío con 422",
+          "status": "passed",
+          "title": "rechaza nombre vacío con 422",
+          "duration": 0.598700000000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza nombre espacios con 422",
+          "status": "passed",
+          "title": "rechaza nombre espacios con 422",
+          "duration": 0.18049999999993815,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza nombre largo con 422",
+          "status": "passed",
+          "title": "rechaza nombre largo con 422",
+          "duration": 0.14220000000000255,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza valor cero con 422",
+          "status": "passed",
+          "title": "rechaza valor cero con 422",
+          "duration": 0.15889999999990323,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza valor negativo con 422",
+          "status": "passed",
+          "title": "rechaza valor negativo con 422",
+          "duration": 0.14069999999992433,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza NaN con 422",
+          "status": "passed",
+          "title": "rechaza NaN con 422",
+          "duration": 0.27359999999998763,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza infinito con 422",
+          "status": "passed",
+          "title": "rechaza infinito con 422",
+          "duration": 0.26279999999997017,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza porcentaje >100 con 422",
+          "status": "passed",
+          "title": "rechaza porcentaje >100 con 422",
+          "duration": 0.3020000000001346,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza número como cadena con 422",
+          "status": "passed",
+          "title": "rechaza número como cadena con 422",
+          "duration": 0.2963999999999487,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza descuento enum con 422",
+          "status": "passed",
+          "title": "rechaza descuento enum con 422",
+          "duration": 0.16779999999994288,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estado enum con 422",
+          "status": "passed",
+          "title": "rechaza estado enum con 422",
+          "duration": 0.12059999999996762,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza modalidad enum con 422",
+          "status": "passed",
+          "title": "rechaza modalidad enum con 422",
+          "duration": 0.11310000000003129,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza prioridad cero con 422",
+          "status": "passed",
+          "title": "rechaza prioridad cero con 422",
+          "duration": 0.13040000000000873,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza prioridad decimal con 422",
+          "status": "passed",
+          "title": "rechaza prioridad decimal con 422",
+          "duration": 0.14200000000005275,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza prioridad cadena con 422",
+          "status": "passed",
+          "title": "rechaza prioridad cadena con 422",
+          "duration": 0.11140000000000327,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza sin zona con 422",
+          "status": "passed",
+          "title": "rechaza sin zona con 422",
+          "duration": 0.09199999999987085,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza calendario imposible con 422",
+          "status": "passed",
+          "title": "rechaza calendario imposible con 422",
+          "duration": 0.08799999999996544,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza mes imposible con 422",
+          "status": "passed",
+          "title": "rechaza mes imposible con 422",
+          "duration": 0.0865000000001146,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza día imposible con 422",
+          "status": "passed",
+          "title": "rechaza día imposible con 422",
+          "duration": 0.13069999999993342,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza hora 24 con 422",
+          "status": "passed",
+          "title": "rechaza hora 24 con 422",
+          "duration": 0.088799999999992,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza zona imposible con 422",
+          "status": "passed",
+          "title": "rechaza zona imposible con 422",
+          "duration": 0.10210000000006403,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fechas iguales con 422",
+          "status": "passed",
+          "title": "rechaza fechas iguales con 422",
+          "duration": 0.1227000000001226,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fechas invertidas con 422",
+          "status": "passed",
+          "title": "rechaza fechas invertidas con 422",
+          "duration": 0.08820000000014261,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza alcance vacío con 422",
+          "status": "passed",
+          "title": "rechaza alcance vacío con 422",
+          "duration": 0.10740000000009786,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza listas vacías con 422",
+          "status": "passed",
+          "title": "rechaza listas vacías con 422",
+          "duration": 0.10239999999998872,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza producto inactivo con 422",
+          "status": "passed",
+          "title": "rechaza producto inactivo con 422",
+          "duration": 0.0987999999999829,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza producto inexistente con 422",
+          "status": "passed",
+          "title": "rechaza producto inexistente con 422",
+          "duration": 0.0969000000000051,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza SKU inactivo con 422",
+          "status": "passed",
+          "title": "rechaza SKU inactivo con 422",
+          "duration": 0.12609999999995125,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza SKU inexistente con 422",
+          "status": "passed",
+          "title": "rechaza SKU inexistente con 422",
+          "duration": 0.10159999999996217,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza producto duplicado con 422",
+          "status": "passed",
+          "title": "rechaza producto duplicado con 422",
+          "duration": 0.10159999999996217,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza SKU duplicado con 422",
+          "status": "passed",
+          "title": "rechaza SKU duplicado con 422",
+          "duration": 0.13940000000002328,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza lista nula con 422",
+          "status": "passed",
+          "title": "rechaza lista nula con 422",
+          "duration": 0.09839999999985594,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza alcance extra con 422",
+          "status": "passed",
+          "title": "rechaza alcance extra con 422",
+          "duration": 0.09759999999982938,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza canales vacíos con 422",
+          "status": "passed",
+          "title": "rechaza canales vacíos con 422",
+          "duration": 0.09239999999999782,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza canal inválido con 422",
+          "status": "passed",
+          "title": "rechaza canal inválido con 422",
+          "duration": 0.10409999999978936,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza canal repetido con 422",
+          "status": "passed",
+          "title": "rechaza canal repetido con 422",
+          "duration": 0.09559999999987667,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza canales nulos con 422",
+          "status": "passed",
+          "title": "rechaza canales nulos con 422",
+          "duration": 0.09719999999992979,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza política incompleta con 422",
+          "status": "passed",
+          "title": "rechaza política incompleta con 422",
+          "duration": 0.10200000000008913,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza booleano coercionado con 422",
+          "status": "passed",
+          "title": "rechaza booleano coercionado con 422",
+          "duration": 0.17280000000005202,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza política extra con 422",
+          "status": "passed",
+          "title": "rechaza política extra con 422",
+          "duration": 0.17090000000007421,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza campo extra con 422",
+          "status": "passed",
+          "title": "rechaza campo extra con 422",
+          "duration": 0.10010000000011132,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza solo lectura con 422",
+          "status": "passed",
+          "title": "rechaza solo lectura con 422",
+          "duration": 0.1493000000000393,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza auditoría con 422",
+          "status": "passed",
+          "title": "rechaza auditoría con 422",
+          "duration": 0.1369999999999436,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: null",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: null",
+          "duration": 0.2841000000000804,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: undefined",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: undefined",
+          "duration": 0.1491000000000895,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: 5",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: 5",
+          "duration": 0.14960000000019136,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: \"texto\"",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: \"texto\"",
+          "duration": 0.13229999999998654,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: {}",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: {}",
+          "duration": 0.09820000000013351,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza estructura o campos faltantes: {\"nombre\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza estructura o campos faltantes: {\"nombre\":\"x\"}",
+          "duration": 0.07329999999979009,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos admite alcance solo productos, solo SKU y ambos sin convertir identidades",
+          "status": "passed",
+          "title": "admite alcance solo productos, solo SKU y ambos sin convertir identidades",
+          "duration": 0.39409999999998035,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos valida bisiesto, fracciones y equivalencia con offset",
+          "status": "passed",
+          "title": "valida bisiesto, fracciones y equivalencia con offset",
+          "duration": 0.15789999999992688,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos cuenta caracteres Unicode como el esquema",
+          "status": "passed",
+          "title": "cuenta caracteres Unicode como el esquema",
+          "duration": 0.8857000000000426,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos fusiona sin mutar y sustituye objetos/listas presentes",
+          "status": "passed",
+          "title": "fusiona sin mutar y sustituye objetos/listas presentes",
+          "duration": 0.3088999999999942,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos valida tipo/valor en la entidad fusionada",
+          "status": "passed",
+          "title": "valida tipo/valor en la entidad fusionada",
+          "duration": 0.22649999999998727,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento {}",
+          "status": "passed",
+          "title": "rechaza fragmento {}",
+          "duration": 0.12800000000015643,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento null",
+          "status": "passed",
+          "title": "rechaza fragmento null",
+          "duration": 0.07320000000004256,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento undefined",
+          "status": "passed",
+          "title": "rechaza fragmento undefined",
+          "duration": 0.06739999999990687,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento {\"promotionId\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza fragmento {\"promotionId\":\"x\"}",
+          "duration": 0.06919999999990978,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento {\"puedeCambiarModalidad\":true}",
+          "status": "passed",
+          "title": "rechaza fragmento {\"puedeCambiarModalidad\":true}",
+          "duration": 0.06579999999985375,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos rechaza fragmento {\"created_at\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza fragmento {\"created_at\":\"x\"}",
+          "duration": 0.06680000000005748,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R01–R07: entidad y fragmentos"
+          ],
+          "fullName": "R01–R07: entidad y fragmentos no completa política parcial ni combina alcance parcial",
+          "status": "passed",
+          "title": "no completa política parcial ni combina alcance parcial",
+          "duration": 0.2141999999998916,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote solo permite modalidad para inactiva nunca activada",
+          "status": "passed",
+          "title": "solo permite modalidad para inactiva nunca activada",
+          "duration": 1.0114999999998417,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote mapea admin sin historia/auditoría y comercial con seis campos exactos",
+          "status": "passed",
+          "title": "mapea admin sin historia/auditoría y comercial con seis campos exactos",
+          "duration": 0.3479000000002088,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote acepta 1 y 20 elementos en orden",
+          "status": "passed",
+          "title": "acepta 1 y 20 elementos en orden",
+          "duration": 0.745200000000068,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote rechaza lote inválido",
+          "status": "passed",
+          "title": "rechaza lote inválido",
+          "duration": 0.15299999999979264,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote rechaza lote inválido",
+          "status": "passed",
+          "title": "rechaza lote inválido",
+          "duration": 0.08439999999995962,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote rechaza lote inválido",
+          "status": "passed",
+          "title": "rechaza lote inválido",
+          "duration": 0.0729999999998654,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote rechaza lote inválido",
+          "status": "passed",
+          "title": "rechaza lote inválido",
+          "duration": 0.1407000000001517,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R08–R14: historia, representaciones y lote"
+          ],
+          "fullName": "R08–R14: historia, representaciones y lote rechaza lote inválido",
+          "status": "passed",
+          "title": "rechaza lote inválido",
+          "duration": 0.07930000000010295,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento aplica defaults exactos",
+          "status": "passed",
+          "title": "aplica defaults exactos",
+          "duration": 0.40030000000001564,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"pagina\":\"0\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"pagina\":\"0\"}",
+          "duration": 0.1775000000000091,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"tamanio\":\"101\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"tamanio\":\"101\"}",
+          "duration": 0.14470000000005712,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"pagina\":\"1.1\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"pagina\":\"1.1\"}",
+          "duration": 0.07939999999985048,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"pagina\":\"1e2\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"pagina\":\"1e2\"}",
+          "duration": 0.07719999999994798,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"tamanio\":[\"1\",\"2\"]}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"tamanio\":[\"1\",\"2\"]}",
+          "duration": 0.07159999999998945,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"pagina\":\"\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"pagina\":\"\"}",
+          "duration": 0.0706000000000131,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"estado\":\"ACTIVA\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"estado\":\"ACTIVA\"}",
+          "duration": 0.07760000000007494,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"modalidad\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"modalidad\":\"x\"}",
+          "duration": 0.07639999999992142,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query administrativa {\"extra\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza query administrativa {\"extra\":\"x\"}",
+          "duration": 0.11850000000004002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {}",
+          "status": "passed",
+          "title": "rechaza query comercial {}",
+          "duration": 0.16970000000014807,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {\"canal\":\"WEB\"}",
+          "status": "passed",
+          "title": "rechaza query comercial {\"canal\":\"WEB\"}",
+          "duration": 0.08020000000010441,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {\"canal\":[\"VENTAS\",\"RETAIL\"]}",
+          "status": "passed",
+          "title": "rechaza query comercial {\"canal\":[\"VENTAS\",\"RETAIL\"]}",
+          "duration": 0.07130000000006476,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {\"canal\":\"VENTAS\",\"vigentes\":\"1\"}",
+          "status": "passed",
+          "title": "rechaza query comercial {\"canal\":\"VENTAS\",\"vigentes\":\"1\"}",
+          "duration": 0.12639999999987594,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {\"canal\":\"VENTAS\",\"vigentes\":\"TRUE\"}",
+          "status": "passed",
+          "title": "rechaza query comercial {\"canal\":\"VENTAS\",\"vigentes\":\"TRUE\"}",
+          "duration": 0.0728999999998905,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento rechaza query comercial {\"canal\":\"VENTAS\",\"estado\":\"\"}",
+          "status": "passed",
+          "title": "rechaza query comercial {\"canal\":\"VENTAS\",\"estado\":\"\"}",
+          "duration": 0.09190000000012333,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento UUID inválido x",
+          "status": "passed",
+          "title": "UUID inválido x",
+          "duration": 0.22339999999985594,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento UUID inválido ",
+          "status": "passed",
+          "title": "UUID inválido ",
+          "duration": 0.13520000000016807,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento UUID inválido 00000000-0000-4000-8000-00000000000Z",
+          "status": "passed",
+          "title": "UUID inválido 00000000-0000-4000-8000-00000000000Z",
+          "duration": 0.07819999999992433,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento acepta UUID y serializa solo los campos de Problem",
+          "status": "passed",
+          "title": "acepta UUID y serializa solo los campos de Problem",
+          "duration": 0.314200000000028,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R13–R16: path, query, Problems y aislamiento"
+          ],
+          "fullName": "R13–R16: path, query, Problems y aislamiento restringe las conexiones a las bases locales asignadas",
+          "status": "passed",
+          "title": "restringe las conexiones a las bases locales asignadas",
+          "duration": 0.5417999999999665,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1794661926422,
+      "endTime": 1794661926441.5417,
+      "status": "passed",
+      "message": "",
+      "name": "./experimentos/C-sol-spec/proyecto/test/domain.unit.spec.ts"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "caso": "D-nemotron-spec",
+  "modelo": "Nemotron 3.5 Super VL Free",
+  "model_id": "opencode/nemotron-3.5-super-vl-free",
+  "estado_publicacion": "ENTRADAS_INICIALES; RESULTADOS_PENDIENTES",
+  "enfoque": "spec preparada",
+  "cantidad_prompts_prevista": 1
+}

@@ -1,0 +1,23 @@
+{
+  "caso": "C-sol-spec",
+  "intento": 2,
+  "modelo": "GPT-6.1 Sol",
+  "model_id": "gpt-6.1-sol",
+  "enfoque": "spec",
+  "estado_modelo": "ENTREGA_RECIBIDA_CON_EVIDENCIAS",
+  "cantidad_prompts": 1,
+  "entorno": "PASS_PREFLIGHT",
+  "fecha_preparacion": "2026-11-14",
+  "ruta_proyecto": "./experimentos\\C-sol-spec\\proyecto",
+  "package_lock_sha256": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+  "infraestructura_preparada_antes_del_modelo": true,
+  "estado_revision": "ANALIZADA_CON_OBSERVACIONES",
+  "resultado_suites_propias": {
+    "build_exit": 0,
+    "typecheck_exit": 0,
+    "unit_passed": 91,
+    "e2e_passed": 68,
+    "fuente": "Logs/JSON guardados por el agente, inspeccionados por el coordinador"
+  },
+  "informe": "evaluacion/informe-A-C.md"
+}

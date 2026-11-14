@@ -1,0 +1,1 @@
+{"migracion":"001_promociones.sql","base":"lab_promociones_test","estado":"aplicada"}

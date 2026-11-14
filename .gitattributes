@@ -1,0 +1,2 @@
+# Preserve the bytes of frozen experimental inputs and their SHA-256 on every platform.
+* -text

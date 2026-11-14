@@ -1,0 +1,8 @@
+{
+  "migracion": "001-promociones",
+  "resultado": {
+    "base": "lab_promociones",
+    "columnas": 14,
+    "promociones": 3
+  }
+}

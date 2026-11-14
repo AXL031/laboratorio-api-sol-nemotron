@@ -1,0 +1,121 @@
+
+> lab-promociones@1.0.0 test:e2e
+> node --env-file=.env.test node_modules/vitest/vitest.mjs run --config vitest.e2e.config.ts -t configuración asociada recién
+
+
+ RUN  v4.1.2 ./experimentos/C-sol-spec/proyecto
+
+ ❯ test/promotions.e2e.spec.ts (68 tests | 1 failed | 67 skipped) 322ms
+     ↓ 401 precede a JSON malformado e ID inválido; lector obtiene 403
+     ↓ lector no puede post
+     ↓ lector no puede patch
+     ↓ lector no puede delete
+     ↓ admin y lector acceden a las tres consultas
+     ↓ get valida UUID y ausencia
+     ↓ patch valida UUID y ausencia
+     ↓ delete valida UUID y ausencia
+     ↓ JSON válido null es 422
+     ↓ JSON válido 5 es 422
+     ↓ JSON válido [] es 422
+     ↓ JSON válido "texto" es 422
+     ↓ crea nombres repetidos con UUID distintos, 14 columnas y datos asociados persistidos
+     ↓ rechaza entidad inválida sin filas parciales: {"nombre":"  "}
+     ↓ rechaza entidad inválida sin filas parciales: {"valor":0}
+     ↓ rechaza entidad inválida sin filas parciales: {"valor":101}
+     ↓ rechaza entidad inválida sin filas parciales: {"valor":"5"}
+     ↓ rechaza entidad inválida sin filas parciales: {"validFrom":"2025-02-30T00:00:00Z"}
+     ↓ rechaza entidad inválida sin filas parciales: {"validUntil":"2010-01-01T00:00:00Z"}
+     ↓ rechaza entidad inválida sin filas parciales: {"validFrom":"2020-01-01T00:00:00"}
+     ↓ rechaza entidad inválida sin filas parciales: {"alcance":{}}
+     ↓ rechaza entidad inválida sin filas parciales: {"alcance":{"productIds":["PRD-LAB-INACTIVO"]}}
+     ↓ rechaza entidad inválida sin filas parciales: {"alcance":{"skus":["SKU-LAB-INACTIVO"]}}
+     ↓ rechaza entidad inválida sin filas parciales: {"alcance":{"skus":["NO-EXISTE"]}}
+     ↓ rechaza entidad inválida sin filas parciales: {"alcance":{"skus":["SKU-LAB-001","SKU-LAB-001"]}}
+     ↓ rechaza entidad inválida sin filas parciales: {"canalesHabilitados":[]}
+     ↓ rechaza entidad inválida sin filas parciales: {"canalesHabilitados":["VENTAS","VENTAS"]}
+     ↓ rechaza entidad inválida sin filas parciales: {"canalesHabilitados":["WEB"]}
+     ↓ rechaza entidad inválida sin filas parciales: {"prioridad":1.5}
+     ↓ rechaza entidad inválida sin filas parciales: {"politicaCombinacion":{"cupon":true}}
+     ↓ rechaza entidad inválida sin filas parciales: {"promotionId":"3267b950-b470-428d-a66a-6ea6d6e3829b"}
+     ↓ rechaza entidad inválida sin filas parciales: {"extra":"x"}
+     ↓ lote de 20 mantiene orden y asociaciones
+     ↓ rechaza lote de 0 elementos
+     ↓ rechaza lote de 21 elementos
+     ↓ segundo elemento inválido revierte/no inserta ninguno por HTTP
+     ↓ fallo SQL real en la segunda asociación revierte también la primera alta
+     ↓ restricciones SQL rechazan un porcentaje inválido y promoción sin asociación
+     ↓ PATCH nombre conserva todo lo demás; sustituye alcance y canales
+     ↓ valida la entidad fusionada y conserva la fila cuando falla
+     ↓ rechaza PATCH {}
+     ↓ rechaza PATCH {"puedeCambiarModalidad":true}
+     ↓ rechaza PATCH {"first_activated_at":null}
+     ↓ rechaza PATCH {"alcance":{"productIds":[]}}
+     ↓ rechaza PATCH {"politicaCombinacion":{"cupon":true}}
+     ↓ cambia modalidad nunca activada, activa una sola vez y conserva historia al desactivar
+     ↓ crear ACTIVO registra antecedente; desactivar y cambiar modalidad sigue bloqueado
+     ↓ dos PATCH concurrentes conservan campos e historia
+     ↓ espera el bloqueo de activación y rechaza un cambio basado en una lectura antigua
+     × un PATCH que espera un bloqueo conserva la configuración asociada recién confirmada 168ms
+     ↓ comercial usa defaults, canal y resumen exacto; false omite solo el tiempo
+     ↓ vigencia incluye inicio y excluye fin con el mismo instante PostgreSQL
+     ↓ admin pagina y cuenta antes de paginar; defaults y página fuera del rango
+     ↓ sin resultados devuelve totalPaginas 0
+     ↓ query comercial inválida 
+     ↓ query comercial inválida ?canal=WEB
+     ↓ query comercial inválida ?canal=VENTAS&canal=RETAIL
+     ↓ query comercial inválida ?canal=VENTAS&vigentes=1
+     ↓ query comercial inválida ?canal=VENTAS&extra=x
+     ↓ query admin inválida ?pagina=0
+     ↓ query admin inválida ?tamanio=101
+     ↓ query admin inválida ?pagina=1.5
+     ↓ query admin inválida ?estado=ACTIVA
+     ↓ query admin inválida ?modalidad=x
+     ↓ query admin inválida ?pagina=1&pagina=2
+     ↓ 204 vacío, no expone borrados y las siguientes operaciones devuelven 404
+     ↓ PATCH y DELETE concurrentes no resucitan una promoción
+     ↓ cerrar Nest/pool y crear una nueva instancia conserva datos, asociaciones e historia
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/promotions.e2e.spec.ts > O03: fusión, modalidad e historia sin carreras > un PATCH que espera un bloqueo conserva la configuración asociada recién confirmada
+AssertionError: expected { …(13) } to match object { nombre: 'Segunda escritura', …(2) }
+(11 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "alcance": {
+      "skus": [
+-       "SKU-LAB-002",
++       "SKU-LAB-001",
+      ],
+    },
+    "nombre": "Segunda escritura",
+    "politicaCombinacion": {
+-     "cupon": true,
+-     "ofertaPricing": true,
+-     "promocionAutomatica": false,
++     "cupon": false,
++     "ofertaPricing": false,
++     "promocionAutomatica": true,
+    },
+  }
+
+ ❯ test/promotions.e2e.spec.ts:240:29
+    238|       const response = await pending;
+    239|       expect(response.status).toBe(200);
+    240|       expect(response.body).toMatchObject({ nombre: 'Segunda escritura…
+       |                             ^
+    241|       const read = await auth(http().get(`${base}/${p.promotionId}`));
+    242|       expect(read.body).toMatchObject({ alcance: scope, politicaCombin…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 67 skipped (68)
+   Start at  08:11:40
+   Duration  2.68s (transform 254ms, setup 0ms, import 1.30s, tests 322ms, environment 0ms)
+
+JSON report written to ./experimentos/C-sol-spec/proyecto/evidencias/e2e.json

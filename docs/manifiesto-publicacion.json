@@ -1,0 +1,840 @@
+{
+  "fecha": "2026-11-14",
+  "repositorio": "AXL031/laboratorio-api-sol-nemotron",
+  "archivos_de_origen": [
+    {
+      "archivo": "base/.env.example",
+      "sha256_origen": "1f68a107749fec5d4fc59975585d531925d449e8f1849e4fb2e23928a68b28f7",
+      "sha256_publicado": "1f68a107749fec5d4fc59975585d531925d449e8f1849e4fb2e23928a68b28f7",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/.gitignore",
+      "sha256_origen": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "sha256_publicado": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/.npmrc",
+      "sha256_origen": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "sha256_publicado": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/ENTREGA.md",
+      "sha256_origen": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "sha256_publicado": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/package-lock.json",
+      "sha256_origen": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "sha256_publicado": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/package.json",
+      "sha256_origen": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "sha256_publicado": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "base/tsconfig.json",
+      "sha256_origen": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "sha256_publicado": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "comun/catalogo.json",
+      "sha256_origen": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "sha256_publicado": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "comun/contexto.md",
+      "sha256_origen": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "sha256_publicado": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "comun/openapi.json",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "comun/openapi.yaml",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "comun/stack.md",
+      "sha256_origen": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "sha256_publicado": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "entrada-spec/plan.md",
+      "sha256_origen": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "sha256_publicado": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "entrada-spec/spec.md",
+      "sha256_origen": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "sha256_publicado": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "entrada-spec/tareas.md",
+      "sha256_origen": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "sha256_publicado": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "prompts/01-directo.md",
+      "sha256_origen": "870b580345b3ed451d771f9e9376e5b4e52a66e54550da2487731187ddb1d616",
+      "sha256_publicado": "870b580345b3ed451d771f9e9376e5b4e52a66e54550da2487731187ddb1d616",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "prompts/02-con-spec.md",
+      "sha256_origen": "f5a9330dc8e1c9a666f43e70d442c11c04c060421e96664c3b9e29337a5a4153",
+      "sha256_publicado": "f5a9330dc8e1c9a666f43e70d442c11c04c060421e96664c3b9e29337a5a4153",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/.env.example",
+      "sha256_origen": "db76813e9441224c322107acdc6badce43fc9357534ea96710242e69bbfe5001",
+      "sha256_publicado": "db76813e9441224c322107acdc6badce43fc9357534ea96710242e69bbfe5001",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/.env.test.example",
+      "sha256_origen": "14cfddaa641f961a00d063cc0263e462494a70d77e09995f6ab98fa1a71ace2c",
+      "sha256_publicado": "14cfddaa641f961a00d063cc0263e462494a70d77e09995f6ab98fa1a71ace2c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/.gitignore",
+      "sha256_origen": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "sha256_publicado": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/.npmrc",
+      "sha256_origen": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "sha256_publicado": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/AGENTS.md",
+      "sha256_origen": "4e1f43209dd84185004f8a9e80bc835300c2ef4342b5124870d0659aa74a27bf",
+      "sha256_publicado": "4e1f43209dd84185004f8a9e80bc835300c2ef4342b5124870d0659aa74a27bf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/ENTORNO.md",
+      "sha256_origen": "2cfa75e3b14b93c6e6dc400a5456dd3a2d88adac7d2bce0e83a6c1a885cd56a0",
+      "sha256_publicado": "2cfa75e3b14b93c6e6dc400a5456dd3a2d88adac7d2bce0e83a6c1a885cd56a0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/ENTREGA.md",
+      "sha256_origen": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "sha256_publicado": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/package-lock.json",
+      "sha256_origen": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "sha256_publicado": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/package.json",
+      "sha256_origen": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "sha256_publicado": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/PRECHECK-ENTORNO.json",
+      "sha256_origen": "978ffc48f1fec5d6260e238884882b607242cff091bf9ffee388b0ca5c2eff2e",
+      "sha256_publicado": "978ffc48f1fec5d6260e238884882b607242cff091bf9ffee388b0ca5c2eff2e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/PROMPT-INICIAL.md",
+      "sha256_origen": "870b580345b3ed451d771f9e9376e5b4e52a66e54550da2487731187ddb1d616",
+      "sha256_publicado": "870b580345b3ed451d771f9e9376e5b4e52a66e54550da2487731187ddb1d616",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/README.md",
+      "sha256_origen": "7b7cbc4b7b0e8a5d237af4665b2d419550106963a4b56e1936d273f9b07ef6c3",
+      "sha256_publicado": "7b7cbc4b7b0e8a5d237af4665b2d419550106963a4b56e1936d273f9b07ef6c3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/tsconfig.json",
+      "sha256_origen": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "sha256_publicado": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/tsconfig.tests.json",
+      "sha256_origen": "ca5a18fb63028ddb66e88110dddd7ba5d38f8151c5103e73e4ca4decf3ec2d5c",
+      "sha256_publicado": "ca5a18fb63028ddb66e88110dddd7ba5d38f8151c5103e73e4ca4decf3ec2d5c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/vitest.config.ts",
+      "sha256_origen": "c19bc185dedeee64408f4d3ab36c81c4937df6cb926fea418a5087248b597c8f",
+      "sha256_publicado": "c19bc185dedeee64408f4d3ab36c81c4937df6cb926fea418a5087248b597c8f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/vitest.e2e.config.ts",
+      "sha256_origen": "b1c13a8bd3582f7464788e16f8e8899a08ceeda291a4b3dfe3b00d02e454df1e",
+      "sha256_publicado": "b1c13a8bd3582f7464788e16f8e8899a08ceeda291a4b3dfe3b00d02e454df1e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/app.ts",
+      "sha256_origen": "5f271849e974c5518b3ecb59ba94f89d9a782321b7a8c6e99fbbfc0cba062855",
+      "sha256_publicado": "5f271849e974c5518b3ecb59ba94f89d9a782321b7a8c6e99fbbfc0cba062855",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/database.ts",
+      "sha256_origen": "e6a2fb95e9f7c088376454031c9a14a6f371d079fc0be0db821087cfde13124c",
+      "sha256_publicado": "e6a2fb95e9f7c088376454031c9a14a6f371d079fc0be0db821087cfde13124c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/main.ts",
+      "sha256_origen": "9b9d80588aeb3ed2ce354eafa76a7ec543e71dd5960e4cf9b2e30831d36006f3",
+      "sha256_publicado": "9b9d80588aeb3ed2ce354eafa76a7ec543e71dd5960e4cf9b2e30831d36006f3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/problem.ts",
+      "sha256_origen": "b5aca9726e525c079ff9ab72a8e4b8abb1cc1ac39c4382be029b13e0fc0343e2",
+      "sha256_publicado": "b5aca9726e525c079ff9ab72a8e4b8abb1cc1ac39c4382be029b13e0fc0343e2",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/promotions.controller.ts",
+      "sha256_origen": "b5c5cbd9d5caeb359916573d4bc8efb9700cbe1148b79097246604f6d45c6371",
+      "sha256_publicado": "b5c5cbd9d5caeb359916573d4bc8efb9700cbe1148b79097246604f6d45c6371",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/promotions.service.ts",
+      "sha256_origen": "589dbf7f3e066225bd69877b10f8781bf73a83f75cb945b56aaa1291c7cd22a4",
+      "sha256_publicado": "589dbf7f3e066225bd69877b10f8781bf73a83f75cb945b56aaa1291c7cd22a4",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/src/validation.ts",
+      "sha256_origen": "cf06d8f4453f6a7bb99b3ef82d3ee87e53d6ea6bbf45437a5bf45ad663aa42a0",
+      "sha256_publicado": "cf06d8f4453f6a7bb99b3ef82d3ee87e53d6ea6bbf45437a5bf45ad663aa42a0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/sql/001-promociones.sql",
+      "sha256_origen": "2714c5a7892edf6a205e5eb81a681e7214a7dc5e14afe996e76b89cfc62f3a89",
+      "sha256_publicado": "2714c5a7892edf6a205e5eb81a681e7214a7dc5e14afe996e76b89cfc62f3a89",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/test/fixture.ts",
+      "sha256_origen": "c8b0d2636a1bc293613e235c922d43f30d97216ca7a4fb30fe228fe37506a2f7",
+      "sha256_publicado": "c8b0d2636a1bc293613e235c922d43f30d97216ca7a4fb30fe228fe37506a2f7",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/test/promotions.e2e.spec.ts",
+      "sha256_origen": "e74bad36fd7103f9584468d762b74ee2fe0edc918d1c2a98f1831a761559fa9c",
+      "sha256_publicado": "e74bad36fd7103f9584468d762b74ee2fe0edc918d1c2a98f1831a761559fa9c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/test/validation.unit.spec.ts",
+      "sha256_origen": "33543e43f9dbbd962a32a58be068f01653d83dbe4afd83bea9d6f858bd246cdf",
+      "sha256_publicado": "33543e43f9dbbd962a32a58be068f01653d83dbe4afd83bea9d6f858bd246cdf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/herramientas/comprobar-entorno.mjs",
+      "sha256_origen": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "sha256_publicado": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/herramientas/migrar.mjs",
+      "sha256_origen": "f0049e7a78d7dc7bc522a4f72f302ca464df98c6e3c2891f790810616d0dfdb9",
+      "sha256_publicado": "f0049e7a78d7dc7bc522a4f72f302ca464df98c6e3c2891f790810616d0dfdb9",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/herramientas/verificar-api.mjs",
+      "sha256_origen": "8eb88ef5c4aa8c25ec9f748c1365b5889c6ebee9c138be37105860ae6cdb8442",
+      "sha256_publicado": "8eb88ef5c4aa8c25ec9f748c1365b5889c6ebee9c138be37105860ae6cdb8442",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/herramientas/verificar-entradas.mjs",
+      "sha256_origen": "69767a1be94b508601d9173def228621b63f5a0d21478718c63596a166ccf0e2",
+      "sha256_publicado": "69767a1be94b508601d9173def228621b63f5a0d21478718c63596a166ccf0e2",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/contrato/catalogo.json",
+      "sha256_origen": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "sha256_publicado": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/contrato/contexto.md",
+      "sha256_origen": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "sha256_publicado": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/contrato/openapi.json",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/contrato/openapi.yaml",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/proyecto/contrato/stack.md",
+      "sha256_origen": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "sha256_publicado": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/API-PERSISTENCIA.json",
+      "sha256_origen": "92a66ff17bd6db3b047ad5014a711c82e4cedf12d41f520609a2a11c7ab53bb5",
+      "sha256_publicado": "92a66ff17bd6db3b047ad5014a711c82e4cedf12d41f520609a2a11c7ab53bb5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/build.log",
+      "sha256_origen": "4955987fdb9d6daf0f812aaf2eea58b005b77a09a9313d99980f617ee4fa0eac",
+      "sha256_publicado": "4955987fdb9d6daf0f812aaf2eea58b005b77a09a9313d99980f617ee4fa0eac",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/e2e.log",
+      "sha256_origen": "6dc14d345e7f345e27e8e23cdf6e3e23336f2eb37093c4b2a0ce8d220616ebd7",
+      "sha256_publicado": "08761ce5e7750566935830972ff0302690f889adca9729441512f96ab373ff50",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/ENTRADAS-FINALES.json",
+      "sha256_origen": "999e2e23a027a54968de8bbc62c26f757d4f4021d005aa50febf6360605bf670",
+      "sha256_publicado": "999e2e23a027a54968de8bbc62c26f757d4f4021d005aa50febf6360605bf670",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/ENTRADAS-INICIALES.json",
+      "sha256_origen": "71b2134e7986515e5531269b68603a304f70ecd322375908152bf23ca8de03d5",
+      "sha256_publicado": "71b2134e7986515e5531269b68603a304f70ecd322375908152bf23ca8de03d5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/LEEME.md",
+      "sha256_origen": "f47a054da073bc842540bf58a9edfde87606d90b383257cc3dd6c8a6329235a3",
+      "sha256_publicado": "f47a054da073bc842540bf58a9edfde87606d90b383257cc3dd6c8a6329235a3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/migracion-app.log",
+      "sha256_origen": "cb2b9cd8f42d82313e43ea9b5b89d00c60a1d76c63c5ac47e2d0bbe72a986441",
+      "sha256_publicado": "cb2b9cd8f42d82313e43ea9b5b89d00c60a1d76c63c5ac47e2d0bbe72a986441",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/REPORTE.md",
+      "sha256_origen": "8e6293911626962a76dbb0d76f73d164981778fd2865dd8f4b584a5898a3dada",
+      "sha256_publicado": "f504a269fb0383af72f7d1e868440076e583b4c7ef574d39a34b840467b59b29",
+      "tratamiento": "adaptación editorial: rutas/índices y nota sobre enlace de evidencia no disponible"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/typecheck.log",
+      "sha256_origen": "69881ddbfde5753d14d1f1aaf3e55779479ca3bd3f8836e00d825f89fdd77ae3",
+      "sha256_publicado": "69881ddbfde5753d14d1f1aaf3e55779479ca3bd3f8836e00d825f89fdd77ae3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/evidencia/unitarias.log",
+      "sha256_origen": "a47aaa61c0b6709206864ba44dcd77d1149dc8c04a7281ccc3aa23e6736f1d14",
+      "sha256_publicado": "a8448c31881ece4ad3d7de0fd0ec8a4f5e4ea1cd148224a3dc1a0c98f296872a",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "experimentos/A-sol-directo/registro.json",
+      "sha256_origen": "aa5dd086f468a6d7727543f920e83f698df573f6b4fedd420551ff3feb2a0785",
+      "sha256_publicado": "cfe963d7431a447b630829e35bdec57fbb47a26f2e680f640eb4b1bb1a8d6aea",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/.env.example",
+      "sha256_origen": "4c009aee6da7ea794fa58c2c7fe610b84544ea59c9d1424fdd3befc242e0b097",
+      "sha256_publicado": "4c009aee6da7ea794fa58c2c7fe610b84544ea59c9d1424fdd3befc242e0b097",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/.env.test.example",
+      "sha256_origen": "f8cb7ed4923fc3bda8b8da7d4ef7600f984e338f5c1435bcf138ae3e3f61a551",
+      "sha256_publicado": "f8cb7ed4923fc3bda8b8da7d4ef7600f984e338f5c1435bcf138ae3e3f61a551",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/.gitignore",
+      "sha256_origen": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "sha256_publicado": "8c199e9446fbfb3a30f24358a8603b7de391b1d6f58cf10f1166c4193d3f2d5a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/.npmrc",
+      "sha256_origen": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "sha256_publicado": "aac80bca8ce1ed7ef3b5f72c15c666f227dd75f90f5ed2960a6f280cb328ea6f",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/AGENTS.md",
+      "sha256_origen": "eb69dc0035885fafc59640e43945c0a70689c9809ee4ac2b9758a435b8b65aac",
+      "sha256_publicado": "eb69dc0035885fafc59640e43945c0a70689c9809ee4ac2b9758a435b8b65aac",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/AVANCE.md",
+      "sha256_origen": "cbddb0bae74b0771eaca31e036c1179266b83e74d0706a2ab393b230bf467c0a",
+      "sha256_publicado": "cbddb0bae74b0771eaca31e036c1179266b83e74d0706a2ab393b230bf467c0a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/ENTORNO.md",
+      "sha256_origen": "5d3f3e7aca7d9ca89d8c62a56825a6bc3244b01ad996141ee207c91d6a33bec4",
+      "sha256_publicado": "5d3f3e7aca7d9ca89d8c62a56825a6bc3244b01ad996141ee207c91d6a33bec4",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/ENTREGA.md",
+      "sha256_origen": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "sha256_publicado": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/package-lock.json",
+      "sha256_origen": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "sha256_publicado": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/package.json",
+      "sha256_origen": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "sha256_publicado": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/PRECHECK-ENTORNO.json",
+      "sha256_origen": "20107e3afea49f501c5d6668660f04f90aca46888a6b8c8fb011867690a3d4cf",
+      "sha256_publicado": "20107e3afea49f501c5d6668660f04f90aca46888a6b8c8fb011867690a3d4cf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/PROMPT-INICIAL.md",
+      "sha256_origen": "f5a9330dc8e1c9a666f43e70d442c11c04c060421e96664c3b9e29337a5a4153",
+      "sha256_publicado": "f5a9330dc8e1c9a666f43e70d442c11c04c060421e96664c3b9e29337a5a4153",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/README.md",
+      "sha256_origen": "faa586a0b73cad10fb9462375c744cddec5c0896f7d9c39c38a734314ada0210",
+      "sha256_publicado": "faa586a0b73cad10fb9462375c744cddec5c0896f7d9c39c38a734314ada0210",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/tsconfig.json",
+      "sha256_origen": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "sha256_publicado": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/vitest.config.ts",
+      "sha256_origen": "f004908a479c78604dc6dfc51f570084acef2e90224ac01cfae29478fcad5eaf",
+      "sha256_publicado": "f004908a479c78604dc6dfc51f570084acef2e90224ac01cfae29478fcad5eaf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/vitest.e2e.config.ts",
+      "sha256_origen": "f0cd60eb48b3092f6ddd7312a6bda98fa9694c8add9c3dbf49be5ab15056b22b",
+      "sha256_publicado": "f0cd60eb48b3092f6ddd7312a6bda98fa9694c8add9c3dbf49be5ab15056b22b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/app.ts",
+      "sha256_origen": "30f5b1c961870e059a55d050df8ed5a4b095cbff4a6b82cb8d8d7d596aa4b4c8",
+      "sha256_publicado": "30f5b1c961870e059a55d050df8ed5a4b095cbff4a6b82cb8d8d7d596aa4b4c8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/database.ts",
+      "sha256_origen": "5a31cc02a1bba4e33f777f37a3aa293006cde383b1681861b5b7ef5dcd7a1ef3",
+      "sha256_publicado": "5a31cc02a1bba4e33f777f37a3aa293006cde383b1681861b5b7ef5dcd7a1ef3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/domain.ts",
+      "sha256_origen": "5d9c97ca3fd8c6f1abbf2637867cad259f106d4045262f0fc83ab7bd8ef327fa",
+      "sha256_publicado": "5d9c97ca3fd8c6f1abbf2637867cad259f106d4045262f0fc83ab7bd8ef327fa",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/main.ts",
+      "sha256_origen": "fd67f8cabfc7b33d265d27a681c64748933278909930b93b5a8d47c26957e769",
+      "sha256_publicado": "fd67f8cabfc7b33d265d27a681c64748933278909930b93b5a8d47c26957e769",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/problem.ts",
+      "sha256_origen": "974a7089ccb4f71ae168a70f11501cb2abb4c61cbfce4d5c61a81b5fdbdf3bf4",
+      "sha256_publicado": "974a7089ccb4f71ae168a70f11501cb2abb4c61cbfce4d5c61a81b5fdbdf3bf4",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/promotions.controller.ts",
+      "sha256_origen": "1c8a5cfe3ebca79c72cb91765324485c2eb6420860a57eeedb1e57c2b44f829b",
+      "sha256_publicado": "1c8a5cfe3ebca79c72cb91765324485c2eb6420860a57eeedb1e57c2b44f829b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/src/promotions.repository.ts",
+      "sha256_origen": "4bda2556c2b8c68b8b9567742be43d4fa07afd5cb9cbd5250063d1973cd946b5",
+      "sha256_publicado": "4bda2556c2b8c68b8b9567742be43d4fa07afd5cb9cbd5250063d1973cd946b5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/sql/001_promociones.sql",
+      "sha256_origen": "1d15d28e6485e95549073109edcdf7d8eda79b7bcce432b761b8d3965e3cfdde",
+      "sha256_publicado": "1d15d28e6485e95549073109edcdf7d8eda79b7bcce432b761b8d3965e3cfdde",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/test/contract.ts",
+      "sha256_origen": "487312fad158687447e7163592a92d4d50f02109ad54cf86107b0569bdb8facf",
+      "sha256_publicado": "487312fad158687447e7163592a92d4d50f02109ad54cf86107b0569bdb8facf",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/test/domain.unit.spec.ts",
+      "sha256_origen": "329045d3b47f0e109c530c5c8c5afdd8daac091133bb16bda91f1fef0520f80d",
+      "sha256_publicado": "329045d3b47f0e109c530c5c8c5afdd8daac091133bb16bda91f1fef0520f80d",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/test/fixtures.ts",
+      "sha256_origen": "e6e7f609062b5bd86741de735b746900e27c685758cd8a22590e397bacbcbcb2",
+      "sha256_publicado": "e6e7f609062b5bd86741de735b746900e27c685758cd8a22590e397bacbcbcb2",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/test/promotions.e2e.spec.ts",
+      "sha256_origen": "465af324dfb43aedabd1a4d6984a0ebdda04513120b2d67675f4fa92ce3c4d74",
+      "sha256_publicado": "465af324dfb43aedabd1a4d6984a0ebdda04513120b2d67675f4fa92ce3c4d74",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/herramientas/comprobar-entorno.mjs",
+      "sha256_origen": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "sha256_publicado": "0021948098e37db830621552363cd319cd973818cffe0cd0bd51b524a008e014",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/herramientas/comprobar-persistencia.mjs",
+      "sha256_origen": "4f4d753a33ccad8f03b709126e488313e6f472819ad4b626b5134c858b77e6ab",
+      "sha256_publicado": "4f4d753a33ccad8f03b709126e488313e6f472819ad4b626b5134c858b77e6ab",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/herramientas/migrar.mjs",
+      "sha256_origen": "1d9720f9b9ebe705a1064c3b2cd07d7194d01604126d4b33d59b2d96479c43a8",
+      "sha256_publicado": "1d9720f9b9ebe705a1064c3b2cd07d7194d01604126d4b33d59b2d96479c43a8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/documentos/plan.md",
+      "sha256_origen": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "sha256_publicado": "ce7111491cae7f707a0594ea5816db6ee499981a35975e6b855f07fa8878f4d5",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/documentos/spec.md",
+      "sha256_origen": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "sha256_publicado": "d83585d6c5671581126bb8fd6da0ee4e69d902111347f75f86f42c47e91914a8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/documentos/tareas.md",
+      "sha256_origen": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "sha256_publicado": "08acaf21a1bda8f15cc23d16deff70f16fa84348e1466eefc2c177c3b8042daa",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/contrato/catalogo.json",
+      "sha256_origen": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "sha256_publicado": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/contrato/contexto.md",
+      "sha256_origen": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "sha256_publicado": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/contrato/openapi.json",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/contrato/openapi.yaml",
+      "sha256_origen": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "sha256_publicado": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/contrato/stack.md",
+      "sha256_origen": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "sha256_publicado": "727ff9e6152f236b8474845b861ec05286a8387fe9d005ee1300c2f9f541870e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/ejemplos/promocion.json",
+      "sha256_origen": "4187a2b2740861fc6d01c890713741978067037d40c9b28a9485687cc012518e",
+      "sha256_publicado": "4187a2b2740861fc6d01c890713741978067037d40c9b28a9485687cc012518e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/build.txt",
+      "sha256_origen": "4955987fdb9d6daf0f812aaf2eea58b005b77a09a9313d99980f617ee4fa0eac",
+      "sha256_publicado": "4955987fdb9d6daf0f812aaf2eea58b005b77a09a9313d99980f617ee4fa0eac",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/e2e.json",
+      "sha256_origen": "7b7858bc1882816bb450e0cb19f7472964b0710edb39afa23e471aa5d279f59f",
+      "sha256_publicado": "b3f01460bad9ddf5fe36c41b0b4c5968b11fbb26a83e0a722bb2bf353ae41001",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/e2e.txt",
+      "sha256_origen": "96519dba576fbaba769d6a71b7c073afa208965c9517168a674a8a94e9b37e96",
+      "sha256_publicado": "23af8f6589df9d5c14ed1026307e75f2f9d605e936961de4b32e5f6eb0bac7bc",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/entradas-iniciales.json",
+      "sha256_origen": "28323b34b2d27b33c8a6e3b84e2940aab39098886be3ca6f18cfd3c1f662580f",
+      "sha256_publicado": "a0bd89d18e43b6882ab28258722d8dec6e2b1271332658707568398ad9ae3333",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/integridad.json",
+      "sha256_origen": "86b5dc34292837c93a8642c04ab4a3a1f0432e859cdbdfd5d77838e961bd4c43",
+      "sha256_publicado": "7d0c32f50d34a9cad3c7fec328a2770c3d3c95d81cc89367f0031a026cade4e2",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/migracion-app.txt",
+      "sha256_origen": "724a15026a83dd62fc6edc1c00b59d69052c74a01d21a1ad8eb41f898393f0ba",
+      "sha256_publicado": "724a15026a83dd62fc6edc1c00b59d69052c74a01d21a1ad8eb41f898393f0ba",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/migracion-e2e.txt",
+      "sha256_origen": "7620230b6c81def88247aec7d72c78b620d01e62a9d7e3d0acc00601f507c43e",
+      "sha256_publicado": "7620230b6c81def88247aec7d72c78b620d01e62a9d7e3d0acc00601f507c43e",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/persistencia.json",
+      "sha256_origen": "79c4022942f7878ccf07c6b5d486fed23126c65a29a662c8f07db8827b6daf48",
+      "sha256_publicado": "79c4022942f7878ccf07c6b5d486fed23126c65a29a662c8f07db8827b6daf48",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/persistencia.txt",
+      "sha256_origen": "4573ab268251dbfe6579456bf9bb5ae07a62323eabeb38476398a1398fc99555",
+      "sha256_publicado": "4573ab268251dbfe6579456bf9bb5ae07a62323eabeb38476398a1398fc99555",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/regresion-concurrencia-antes.txt",
+      "sha256_origen": "3645ffce6974e4c3bf057379952f315bccb41cc98f37caeed35109bc54cb340b",
+      "sha256_publicado": "5327bae3ae73204552607a69eefd7c09694ba6486383a22e091e992f235bec49",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/typecheck.txt",
+      "sha256_origen": "69881ddbfde5753d14d1f1aaf3e55779479ca3bd3f8836e00d825f89fdd77ae3",
+      "sha256_publicado": "69881ddbfde5753d14d1f1aaf3e55779479ca3bd3f8836e00d825f89fdd77ae3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/unitarias.json",
+      "sha256_origen": "2fc6ea567a2f325213ed2a1b7e228bb001c7e4eb958b1f9560942363ac1d9be2",
+      "sha256_publicado": "41111586a289057d7ae778b59267839726c7e65ab7e5be65db51e6d2525f95ed",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/proyecto/evidencias/unitarias.txt",
+      "sha256_origen": "b078ca2e8034d0d84bca0d7bb3baa203ed45c90172ca6f6b759742f02c292873",
+      "sha256_publicado": "1da6057d180f2e6a313ca8ad3bbcd7960468f4627116113fc78ec9bfa0813ac6",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/evidencia/LEEME.md",
+      "sha256_origen": "f47a054da073bc842540bf58a9edfde87606d90b383257cc3dd6c8a6329235a3",
+      "sha256_publicado": "f47a054da073bc842540bf58a9edfde87606d90b383257cc3dd6c8a6329235a3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "experimentos/C-sol-spec/registro.json",
+      "sha256_origen": "05c26ed4ee6bb34155456da223291ebc482e9db2636ced8e65f890e72842cad5",
+      "sha256_publicado": "9e12f3cc4168458f8cc6b96e2a11424aa79c1663a61260b70fc63c5107983691",
+      "tratamiento": "rutas locales normalizadas en metadatos JSON"
+    },
+    {
+      "archivo": "intento-2/infra/00-test-db.sql",
+      "sha256_origen": "00e517c474e83e5e71d314012da3fda96aaf0c3aa7e6c50a8073cf77280c8f15",
+      "sha256_publicado": "00e517c474e83e5e71d314012da3fda96aaf0c3aa7e6c50a8073cf77280c8f15",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "intento-2/infra/compose.yaml",
+      "sha256_origen": "7aae48e4b7d58e2e1afda34ed6ef320dae3c225b3f417ce6722aea1d0b3adc86",
+      "sha256_publicado": "7aae48e4b7d58e2e1afda34ed6ef320dae3c225b3f417ce6722aea1d0b3adc86",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "intento-2/herramientas/arrancar-postgres.ps1",
+      "sha256_origen": "4f0563a3df4d723880a18390fcb50da2683041dfcb6248402429491eca39d1df",
+      "sha256_publicado": "4f0563a3df4d723880a18390fcb50da2683041dfcb6248402429491eca39d1df",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "nemotron/infra/00-test-db.sql",
+      "sha256_origen": "00e517c474e83e5e71d314012da3fda96aaf0c3aa7e6c50a8073cf77280c8f15",
+      "sha256_publicado": "00e517c474e83e5e71d314012da3fda96aaf0c3aa7e6c50a8073cf77280c8f15",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "nemotron/infra/compose.yaml",
+      "sha256_origen": "9bc02858c60a10fc44d45cb061470adeddde3b391e262e585f514c8556a149c3",
+      "sha256_publicado": "9bc02858c60a10fc44d45cb061470adeddde3b391e262e585f514c8556a149c3",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "nemotron/herramientas/arrancar-postgres.ps1",
+      "sha256_origen": "0bb9a9e20000fb3bc0c142763dde375caae8a89c766f385b56460db8e08dc2c8",
+      "sha256_publicado": "0bb9a9e20000fb3bc0c142763dde375caae8a89c766f385b56460db8e08dc2c8",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "PROMPTS-SOL.md",
+      "sha256_origen": "fef9155363d2b0b0ede1d74a5c44fd40ae373fb33ad27ebec562a5729569ac15",
+      "sha256_publicado": "4818c8c2e75be00b5167770b57d42cd1653870e6ec6a6ac2fd0c4ba42723f5e7",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "PROMPTS-NEMOTRON.md",
+      "sha256_origen": "357816a30397776c8283846b11d009900a5e8b1f8f33c4efe132542e1a9bf3a2",
+      "sha256_publicado": "9f7753ba9e12863d848108baea9f75f10c03f34ae698090561916c19c4523f69",
+      "tratamiento": "rutas locales normalizadas en documentación/log"
+    },
+    {
+      "archivo": "EMPEZAR-NEMOTRON.md",
+      "sha256_origen": "ade26eac35125b07475c3fed3840a91da172cbcb5bc6f19b279b45ec6ff357ff",
+      "sha256_publicado": "ade26eac35125b07475c3fed3840a91da172cbcb5bc6f19b279b45ec6ff357ff",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "nemotron/RESULTADO-PREPARACION.md",
+      "sha256_origen": "2f070ff76ff4b19ff0ae4fc35625d7f3841063ae02acd58485a71294487a0e4b",
+      "sha256_publicado": "2f070ff76ff4b19ff0ae4fc35625d7f3841063ae02acd58485a71294487a0e4b",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/informe-A-C.md",
+      "sha256_origen": "a537fd1c1fc6ef81295e092eb1e10a93b717e81e3d5b85624e3db5803eb13d74",
+      "sha256_publicado": "a537fd1c1fc6ef81295e092eb1e10a93b717e81e3d5b85624e3db5803eb13d74",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/README.md",
+      "sha256_origen": "486b9d3938e1c451f69c4fbb6dfd7990ef57be3408bade92b5718bf66ee0e44a",
+      "sha256_publicado": "f2617efcf030976443b03f3a1338859608e8bad9c0a2359531ded63b88d2cf89",
+      "tratamiento": "índice documental adaptado a la publicación"
+    },
+    {
+      "archivo": "evaluacion/evidencia-analisis-intento2.json",
+      "sha256_origen": "87a97127b64d4b4c43b556f6b227d250cdf9e0800aa4401d287b89678330c236",
+      "sha256_publicado": "87a97127b64d4b4c43b556f6b227d250cdf9e0800aa4401d287b89678330c236",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/snapshot-intento2.json",
+      "sha256_origen": "f90366aa785bcd6090e35e40baed2598fe74cf4bb4f066dbd0c12a59364f0cfc",
+      "sha256_publicado": "f90366aa785bcd6090e35e40baed2598fe74cf4bb4f066dbd0c12a59364f0cfc",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/rubrica.md",
+      "sha256_origen": "1305f256e47089f85e3d85f307ce7f4f61abbaf4026b43a81697b06b6094523c",
+      "sha256_publicado": "1305f256e47089f85e3d85f307ce7f4f61abbaf4026b43a81697b06b6094523c",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/casos-de-prueba.md",
+      "sha256_origen": "5b3f184a7b1bb4e8f806d9fc2ff694a0e9bdc83be19e3781157f02c993b40d69",
+      "sha256_publicado": "5b3f184a7b1bb4e8f806d9fc2ff694a0e9bdc83be19e3781157f02c993b40d69",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/revision-spec.md",
+      "sha256_origen": "260bcde8878815a593d9ed183900d30efe1958caf223b2e3a7bbfeba43a19761",
+      "sha256_publicado": "260bcde8878815a593d9ed183900d30efe1958caf223b2e3a7bbfeba43a19761",
+      "tratamiento": "copia exacta"
+    },
+    {
+      "archivo": "evaluacion/persistencia.md",
+      "sha256_origen": "e6a9c61810f24ee2ba18056f8b6923ced743e2d846fb1648ef8bdbcccd045cf9",
+      "sha256_publicado": "e6a9c61810f24ee2ba18056f8b6923ced743e2d846fb1648ef8bdbcccd045cf9",
+      "tratamiento": "copia exacta"
+    }
+  ],
+  "exclusiones": [
+    ".env reales",
+    "node_modules",
+    "dist",
+    "coverage",
+    "datos PostgreSQL",
+    ".local",
+    "historial",
+    "caches",
+    "fuentes originales completas"
+  ],
+  "ejecuciones_modelo_en_publicacion": false
+}

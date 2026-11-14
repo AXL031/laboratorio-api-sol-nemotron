@@ -1,0 +1,856 @@
+{
+  "numTotalTestSuites": 6,
+  "numPassedTestSuites": 6,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 68,
+  "numPassedTests": 68,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1794661933773,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales 401 precede a JSON malformado e ID inválido; lector obtiene 403",
+          "status": "passed",
+          "title": "401 precede a JSON malformado e ID inválido; lector obtiene 403",
+          "duration": 69.66520000000014,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales lector no puede post",
+          "status": "passed",
+          "title": "lector no puede post",
+          "duration": 13.554200000000037,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales lector no puede patch",
+          "status": "passed",
+          "title": "lector no puede patch",
+          "duration": 10.800400000000081,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales lector no puede delete",
+          "status": "passed",
+          "title": "lector no puede delete",
+          "duration": 12.789299999999912,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales admin y lector acceden a las tres consultas",
+          "status": "passed",
+          "title": "admin y lector acceden a las tres consultas",
+          "duration": 110.50250000000005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales get valida UUID y ausencia",
+          "status": "passed",
+          "title": "get valida UUID y ausencia",
+          "duration": 21.795399999999972,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales patch valida UUID y ausencia",
+          "status": "passed",
+          "title": "patch valida UUID y ausencia",
+          "duration": 22.678100000000086,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales delete valida UUID y ausencia",
+          "status": "passed",
+          "title": "delete valida UUID y ausencia",
+          "duration": 21.02870000000007,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales JSON válido null es 422",
+          "status": "passed",
+          "title": "JSON válido null es 422",
+          "duration": 11.049399999999878,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales JSON válido 5 es 422",
+          "status": "passed",
+          "title": "JSON válido 5 es 422",
+          "duration": 11.250900000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales JSON válido [] es 422",
+          "status": "passed",
+          "title": "JSON válido [] es 422",
+          "duration": 13.673199999999952,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "R15–R16 autenticación previa y errores contractuales"
+          ],
+          "fullName": "R15–R16 autenticación previa y errores contractuales JSON válido \"texto\" es 422",
+          "status": "passed",
+          "title": "JSON válido \"texto\" es 422",
+          "duration": 12.90930000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL crea nombres repetidos con UUID distintos, 14 columnas y datos asociados persistidos",
+          "status": "passed",
+          "title": "crea nombres repetidos con UUID distintos, 14 columnas y datos asociados persistidos",
+          "duration": 55.35130000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"nombre\":\"  \"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"nombre\":\"  \"}",
+          "duration": 13.573900000000094,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"valor\":0}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"valor\":0}",
+          "duration": 12.039800000000014,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"valor\":101}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"valor\":101}",
+          "duration": 13.161299999999983,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"valor\":\"5\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"valor\":\"5\"}",
+          "duration": 13.716699999999946,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"validFrom\":\"2025-02-30T00:00:00Z\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"validFrom\":\"2025-02-30T00:00:00Z\"}",
+          "duration": 12.491400000000112,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"validUntil\":\"2010-01-01T00:00:00Z\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"validUntil\":\"2010-01-01T00:00:00Z\"}",
+          "duration": 13.406500000000051,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"validFrom\":\"2020-01-01T00:00:00\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"validFrom\":\"2020-01-01T00:00:00\"}",
+          "duration": 12.283799999999928,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"alcance\":{}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"alcance\":{}}",
+          "duration": 12.749900000000025,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"alcance\":{\"productIds\":[\"PRD-LAB-INACTIVO\"]}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"alcance\":{\"productIds\":[\"PRD-LAB-INACTIVO\"]}}",
+          "duration": 13.413000000000011,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"SKU-LAB-INACTIVO\"]}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"SKU-LAB-INACTIVO\"]}}",
+          "duration": 12.110000000000127,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"NO-EXISTE\"]}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"NO-EXISTE\"]}}",
+          "duration": 12.36889999999994,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"SKU-LAB-001\",\"SKU-LAB-001\"]}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"alcance\":{\"skus\":[\"SKU-LAB-001\",\"SKU-LAB-001\"]}}",
+          "duration": 12.805500000000166,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[]}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[]}",
+          "duration": 12.794200000000046,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[\"VENTAS\",\"VENTAS\"]}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[\"VENTAS\",\"VENTAS\"]}",
+          "duration": 14.14689999999996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[\"WEB\"]}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"canalesHabilitados\":[\"WEB\"]}",
+          "duration": 11.678099999999858,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"prioridad\":1.5}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"prioridad\":1.5}",
+          "duration": 12.504799999999932,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"politicaCombinacion\":{\"cupon\":true}}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"politicaCombinacion\":{\"cupon\":true}}",
+          "duration": 14.35310000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"promotionId\":\"650890b6-21e6-4482-8855-7946eda298b5\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"promotionId\":\"650890b6-21e6-4482-8855-7946eda298b5\"}",
+          "duration": 12.234500000000025,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza entidad inválida sin filas parciales: {\"extra\":\"x\"}",
+          "status": "passed",
+          "title": "rechaza entidad inválida sin filas parciales: {\"extra\":\"x\"}",
+          "duration": 13.089799999999741,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL lote de 20 mantiene orden y asociaciones",
+          "status": "passed",
+          "title": "lote de 20 mantiene orden y asociaciones",
+          "duration": 170.00400000000036,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza lote de 0 elementos",
+          "status": "passed",
+          "title": "rechaza lote de 0 elementos",
+          "duration": 10.23700000000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL rechaza lote de 21 elementos",
+          "status": "passed",
+          "title": "rechaza lote de 21 elementos",
+          "duration": 13.968400000000202,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL segundo elemento inválido revierte/no inserta ninguno por HTTP",
+          "status": "passed",
+          "title": "segundo elemento inválido revierte/no inserta ninguno por HTTP",
+          "duration": 15.953599999999824,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL fallo SQL real en la segunda asociación revierte también la primera alta",
+          "status": "passed",
+          "title": "fallo SQL real en la segunda asociación revierte también la primera alta",
+          "duration": 61.76329999999962,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O01 / O02: altas, catálogo y transacción PostgreSQL"
+          ],
+          "fullName": "O01 / O02: altas, catálogo y transacción PostgreSQL restricciones SQL rechazan un porcentaje inválido y promoción sin asociación",
+          "status": "passed",
+          "title": "restricciones SQL rechazan un porcentaje inválido y promoción sin asociación",
+          "duration": 65.77629999999999,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras PATCH nombre conserva todo lo demás; sustituye alcance y canales",
+          "status": "passed",
+          "title": "PATCH nombre conserva todo lo demás; sustituye alcance y canales",
+          "duration": 62.67290000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras valida la entidad fusionada y conserva la fila cuando falla",
+          "status": "passed",
+          "title": "valida la entidad fusionada y conserva la fila cuando falla",
+          "duration": 47.0306999999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras rechaza PATCH {}",
+          "status": "passed",
+          "title": "rechaza PATCH {}",
+          "duration": 35.27320000000009,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras rechaza PATCH {\"puedeCambiarModalidad\":true}",
+          "status": "passed",
+          "title": "rechaza PATCH {\"puedeCambiarModalidad\":true}",
+          "duration": 34.55630000000019,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras rechaza PATCH {\"first_activated_at\":null}",
+          "status": "passed",
+          "title": "rechaza PATCH {\"first_activated_at\":null}",
+          "duration": 35.934499999999844,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras rechaza PATCH {\"alcance\":{\"productIds\":[]}}",
+          "status": "passed",
+          "title": "rechaza PATCH {\"alcance\":{\"productIds\":[]}}",
+          "duration": 44.93209999999999,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras rechaza PATCH {\"politicaCombinacion\":{\"cupon\":true}}",
+          "status": "passed",
+          "title": "rechaza PATCH {\"politicaCombinacion\":{\"cupon\":true}}",
+          "duration": 41.447799999999916,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras cambia modalidad nunca activada, activa una sola vez y conserva historia al desactivar",
+          "status": "passed",
+          "title": "cambia modalidad nunca activada, activa una sola vez y conserva historia al desactivar",
+          "duration": 168.29939999999988,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras crear ACTIVO registra antecedente; desactivar y cambiar modalidad sigue bloqueado",
+          "status": "passed",
+          "title": "crear ACTIVO registra antecedente; desactivar y cambiar modalidad sigue bloqueado",
+          "duration": 54.30760000000009,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras dos PATCH concurrentes conservan campos e historia",
+          "status": "passed",
+          "title": "dos PATCH concurrentes conservan campos e historia",
+          "duration": 112.0308,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras espera el bloqueo de activación y rechaza un cambio basado en una lectura antigua",
+          "status": "passed",
+          "title": "espera el bloqueo de activación y rechaza un cambio basado en una lectura antigua",
+          "duration": 63.84780000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O03: fusión, modalidad e historia sin carreras"
+          ],
+          "fullName": "O03: fusión, modalidad e historia sin carreras un PATCH que espera un bloqueo conserva la configuración asociada recién confirmada",
+          "status": "passed",
+          "title": "un PATCH que espera un bloqueo conserva la configuración asociada recién confirmada",
+          "duration": 105.54350000000022,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden comercial usa defaults, canal y resumen exacto; false omite solo el tiempo",
+          "status": "passed",
+          "title": "comercial usa defaults, canal y resumen exacto; false omite solo el tiempo",
+          "duration": 92.02299999999968,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden vigencia incluye inicio y excluye fin con el mismo instante PostgreSQL",
+          "status": "passed",
+          "title": "vigencia incluye inicio y excluye fin con el mismo instante PostgreSQL",
+          "duration": 59.89390000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden admin pagina y cuenta antes de paginar; defaults y página fuera del rango",
+          "status": "passed",
+          "title": "admin pagina y cuenta antes de paginar; defaults y página fuera del rango",
+          "duration": 99.07420000000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden sin resultados devuelve totalPaginas 0",
+          "status": "passed",
+          "title": "sin resultados devuelve totalPaginas 0",
+          "duration": 23.398699999999735,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query comercial inválida ",
+          "status": "passed",
+          "title": "query comercial inválida ",
+          "duration": 14.19589999999971,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query comercial inválida ?canal=WEB",
+          "status": "passed",
+          "title": "query comercial inválida ?canal=WEB",
+          "duration": 11.228499999999713,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query comercial inválida ?canal=VENTAS&canal=RETAIL",
+          "status": "passed",
+          "title": "query comercial inválida ?canal=VENTAS&canal=RETAIL",
+          "duration": 11.768100000000231,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query comercial inválida ?canal=VENTAS&vigentes=1",
+          "status": "passed",
+          "title": "query comercial inválida ?canal=VENTAS&vigentes=1",
+          "duration": 12.570099999999911,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query comercial inválida ?canal=VENTAS&extra=x",
+          "status": "passed",
+          "title": "query comercial inválida ?canal=VENTAS&extra=x",
+          "duration": 11.999199999999746,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?pagina=0",
+          "status": "passed",
+          "title": "query admin inválida ?pagina=0",
+          "duration": 13.374099999999999,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?tamanio=101",
+          "status": "passed",
+          "title": "query admin inválida ?tamanio=101",
+          "duration": 31.17119999999977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?pagina=1.5",
+          "status": "passed",
+          "title": "query admin inválida ?pagina=1.5",
+          "duration": 14.704999999999927,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?estado=ACTIVA",
+          "status": "passed",
+          "title": "query admin inválida ?estado=ACTIVA",
+          "duration": 15.34960000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?modalidad=x",
+          "status": "passed",
+          "title": "query admin inválida ?modalidad=x",
+          "duration": 11.863400000000183,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O05–O07: consultas, filtros y orden"
+          ],
+          "fullName": "O05–O07: consultas, filtros y orden query admin inválida ?pagina=1&pagina=2",
+          "status": "passed",
+          "title": "query admin inválida ?pagina=1&pagina=2",
+          "duration": 14.434999999999945,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O04 / R12 / R17: eliminación y reinicio de aplicación"
+          ],
+          "fullName": "O04 / R12 / R17: eliminación y reinicio de aplicación 204 vacío, no expone borrados y las siguientes operaciones devuelven 404",
+          "status": "passed",
+          "title": "204 vacío, no expone borrados y las siguientes operaciones devuelven 404",
+          "duration": 88.87079999999969,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O04 / R12 / R17: eliminación y reinicio de aplicación"
+          ],
+          "fullName": "O04 / R12 / R17: eliminación y reinicio de aplicación PATCH y DELETE concurrentes no resucitan una promoción",
+          "status": "passed",
+          "title": "PATCH y DELETE concurrentes no resucitan una promoción",
+          "duration": 62.39200000000028,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [
+            "O04 / R12 / R17: eliminación y reinicio de aplicación"
+          ],
+          "fullName": "O04 / R12 / R17: eliminación y reinicio de aplicación cerrar Nest/pool y crear una nueva instancia conserva datos, asociaciones e historia",
+          "status": "passed",
+          "title": "cerrar Nest/pool y crear una nueva instancia conserva datos, asociaciones e historia",
+          "duration": 103.38479999999981,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1794661935709,
+      "endTime": 1794661938180.3848,
+      "status": "passed",
+      "message": "",
+      "name": "./experimentos/C-sol-spec/proyecto/test/promotions.e2e.spec.ts"
+    }
+  ]
+}

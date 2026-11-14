@@ -1,0 +1,15 @@
+
+> lab-promociones@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.2 ./experimentos/C-sol-spec/proyecto
+
+ ✓ test/domain.unit.spec.ts (91 tests) 22ms
+
+ Test Files  1 passed (1)
+      Tests  91 passed (91)
+   Start at  08:12:04
+   Duration  2.24s (transform 156ms, setup 0ms, import 1.25s, tests 22ms, environment 0ms)
+
+JSON report written to ./experimentos/C-sol-spec/proyecto/evidencias/unitarias.json

@@ -1,0 +1,30 @@
+{
+  "nota": "Fixture académico explícito; no integración ni datos de producción. Solo estas referencias se aceptan.",
+  "products": [
+    {
+      "productId": "PRD-LAB-001",
+      "active": true
+    },
+    {
+      "productId": "PRD-LAB-INACTIVO",
+      "active": false
+    }
+  ],
+  "skus": [
+    {
+      "sku": "SKU-LAB-001",
+      "productId": "PRD-LAB-001",
+      "active": true
+    },
+    {
+      "sku": "SKU-LAB-002",
+      "productId": "PRD-LAB-001",
+      "active": true
+    },
+    {
+      "sku": "SKU-LAB-INACTIVO",
+      "productId": "PRD-LAB-001",
+      "active": false
+    }
+  ]
+}

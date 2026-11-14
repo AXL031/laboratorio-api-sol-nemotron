@@ -1,0 +1,57 @@
+[
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\package.json",
+    "sha256": "32CE5600D29DCFE11BC5E57B686E70860B4D578CD0CA816E2FE080BF7C826A2D",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\package-lock.json",
+    "sha256": "DF9D4B26D79F33404FE4F605831E4DAA30DB450AE7CE14C82923FB0B1246A223",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\tsconfig.json",
+    "sha256": "68BEBDFDA688B78BAE4F82A2CB823FBFC0A9F9EDD44B0FB6DEAF48BB92B5AC84",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\contrato\\catalogo.json",
+    "sha256": "DE09E88E9316870B2AFFA2446C82161FD9D32004DB316017B1DDEA0A835AB20B",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\contrato\\contexto.md",
+    "sha256": "B1A354B5A7B0C9E727F2AA533F84A25F6385213608F802AA1BF9AC429217E5E0",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\contrato\\openapi.json",
+    "sha256": "0591300DEF1E263A3789B66B62B7E6A0E090C810088CD8F2E13ED83C6D794CD0",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\contrato\\openapi.yaml",
+    "sha256": "0591300DEF1E263A3789B66B62B7E6A0E090C810088CD8F2E13ED83C6D794CD0",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\contrato\\stack.md",
+    "sha256": "727FF9E6152F236B8474845B861EC05286A8387FE9D005EE1300C2F9F541870E",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\documentos\\plan.md",
+    "sha256": "CE7111491CAE7F707A0594EA5816DB6EE499981A35975E6B855F07FA8878F4D5",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\documentos\\spec.md",
+    "sha256": "D83585D6C5671581126BB8FD6DA0EE4E69D902111347F75F86F42C47E91914A8",
+    "sinCambios": true
+  },
+  {
+    "archivo": "./experimentos\\C-sol-spec\\proyecto\\documentos\\tareas.md",
+    "sha256": "08ACAF21A1BDA8F15CC23D16DEFF70F16FA84348E1466EEFC2C177C3B8042DAA",
+    "sinCambios": true
+  }
+]

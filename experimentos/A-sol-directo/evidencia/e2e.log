@@ -1,0 +1,13 @@
+
+> lab-promociones@1.0.0 test:e2e
+> node --env-file=.env.test node_modules/vitest/vitest.mjs run --config vitest.e2e.config.ts
+
+
+ RUN  v4.1.2 ./experimentos/A-sol-directo/proyecto
+
+
+ Test Files  1 passed (1)
+      Tests  59 passed (59)
+   Start at  07:56:11
+   Duration  4.19s (transform 186ms, setup 0ms, import 1.26s, tests 2.08s, environment 0ms)
+

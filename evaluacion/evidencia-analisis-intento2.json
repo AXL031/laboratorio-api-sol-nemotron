@@ -1,0 +1,126 @@
+{
+  "fecha": "2026-11-14",
+  "intento": 2,
+  "modelo": "GPT-6.1 Sol",
+  "enfoques": {
+    "A": "directo",
+    "C": "spec preparada"
+  },
+  "metodo_coordinador": "Inspección de archivos/logs y SHA-256; sin ejecutar ni modificar el API",
+  "pruebas_registradas": {
+    "A_unit": {
+      "passed": 87,
+      "tipo": "log guardado del agente"
+    },
+    "A_e2e": {
+      "passed": 59,
+      "tipo": "log guardado del agente"
+    },
+    "C_unit": {
+      "passed": 91,
+      "failed": 0,
+      "success": true,
+      "tipo": "reporte JSON guardado del agente"
+    },
+    "C_e2e": {
+      "passed": 68,
+      "failed": 0,
+      "success": true,
+      "tipo": "reporte JSON guardado del agente"
+    }
+  },
+  "operaciones_declaradas": {
+    "A": {
+      "post": 2,
+      "patch": 1,
+      "delete": 1,
+      "get": 3
+    },
+    "C": {
+      "post": 2,
+      "patch": 1,
+      "delete": 1,
+      "get": 3
+    }
+  },
+  "columnas_sql": {
+    "A": [
+      "id",
+      "name",
+      "discount_type",
+      "discount_value",
+      "modality",
+      "state",
+      "valid_from",
+      "valid_until",
+      "priority",
+      "enabled_channels",
+      "first_activated_at",
+      "created_at",
+      "updated_at",
+      "deleted_at"
+    ],
+    "C": [
+      "id",
+      "name",
+      "discount_type",
+      "discount_value",
+      "modality",
+      "state",
+      "valid_from",
+      "valid_until",
+      "priority",
+      "enabled_channels",
+      "first_activated_at",
+      "created_at",
+      "updated_at",
+      "deleted_at"
+    ]
+  },
+  "entradas_contra_base": {
+    "A": {
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true
+    },
+    "C": {
+      "contrato/catalogo.json": true,
+      "contrato/contexto.md": true,
+      "contrato/openapi.json": true,
+      "contrato/openapi.yaml": true,
+      "contrato/stack.md": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "tsconfig.json": true,
+      "documentos/plan.md": true,
+      "documentos/spec.md": true,
+      "documentos/tareas.md": true
+    }
+  },
+  "hashes_registrados_por_agentes": {
+    "A": 8,
+    "C": 11
+  },
+  "regresion_C": {
+    "estado_inicial": "FALLO_OBSERVADO_EN_LOG",
+    "estado_final": "PASS_EN_SUITE_FINAL",
+    "tipo": "Configuración antigua tras esperar bloqueo",
+    "fallo": "experimentos/C-sol-spec/proyecto/evidencias/regresion-concurrencia-antes.txt",
+    "prueba": "experimentos/C-sol-spec/proyecto/test/promotions.e2e.spec.ts:219",
+    "codigo_corregido": "experimentos/C-sol-spec/proyecto/src/promotions.repository.ts:24"
+  },
+  "riesgo_A": {
+    "tipo": "PATRON_SIMILAR_POR_INSPECCION",
+    "reproducido_en_A_por_coordinador": false,
+    "fuente": "experimentos/A-sol-directo/proyecto/src/promotions.service.ts:53"
+  },
+  "persistencia": "Reinicio de proceso API en ambos; no reinicio de PostgreSQL",
+  "resultado_comparativo": "Ventaja cualitativa de C en trazabilidad, integridad y regresión concurrente; no prueba causal general",
+  "suite_comun_independiente": "NO_EJECUTADA",
+  "puntuacion_numerica": null
+}

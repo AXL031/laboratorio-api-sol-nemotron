@@ -1,0 +1,1625 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Laboratorio académico — Promociones",
+    "version": "1.0.0-lab",
+    "description": "Contrato académico independiente derivado de G6 0.6.0-rc.1. NO es el contrato oficial ni una propuesta de despliegue. Cambios y simplificaciones en comun/contexto.md."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:3000/api/v1",
+      "description": "Instancia local aislada del laboratorio"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Promociones"
+    }
+  ],
+  "paths": {
+    "/promociones": {
+      "post": {
+        "operationId": "crearPromocion",
+        "summary": "Crear una promoción",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PromocionAdmin"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 422
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PromocionCreate"
+              }
+            }
+          }
+        },
+        "x-lab-origin": "adaptado-de-contrato-G6",
+        "x-lab-role": "ADMIN"
+      },
+      "get": {
+        "operationId": "listarPromociones",
+        "summary": "Listar promociones comerciales por canal",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PromocionesComerciales"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "canal",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "MARKETPLACE",
+                "CHATBOT",
+                "RETAIL",
+                "VENTAS"
+              ]
+            }
+          },
+          {
+            "name": "vigentes",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ACTIVO",
+                "INACTIVO"
+              ],
+              "default": "ACTIVO"
+            }
+          }
+        ],
+        "x-lab-origin": "adaptado-de-contrato-G6",
+        "x-lab-role": "LECTOR_O_ADMIN"
+      }
+    },
+    "/promociones/lote": {
+      "post": {
+        "operationId": "crearPromocionesLote",
+        "summary": "Crear de 1 a 20 promociones en una transacción atómica",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoteResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 422
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoteCreate"
+              }
+            }
+          }
+        },
+        "x-lab-origin": "extension-academica",
+        "x-lab-role": "ADMIN"
+      }
+    },
+    "/promociones/administracion": {
+      "get": {
+        "operationId": "listarPromocionesAdmin",
+        "summary": "Listar configuración administrativa paginada",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginaPromocionesAdmin"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "tamanio",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20
+            }
+          },
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ACTIVO",
+                "INACTIVO"
+              ]
+            }
+          },
+          {
+            "name": "modalidad",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "AUTOMATICA",
+                "CUPON"
+              ]
+            }
+          }
+        ],
+        "x-lab-origin": "adaptado-de-contrato-G6",
+        "x-lab-role": "LECTOR_O_ADMIN"
+      }
+    },
+    "/promociones/{promocionId}": {
+      "get": {
+        "operationId": "obtenerPromocionAdmin",
+        "summary": "Consultar detalle administrativo",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PromocionAdmin"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: PROMOCION_NO_ENCONTRADA",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 404
+                        },
+                        "code": {
+                          "enum": [
+                            "PROMOCION_NO_ENCONTRADA"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "promocionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-lab-origin": "adaptado-de-contrato-G6",
+        "x-lab-role": "LECTOR_O_ADMIN"
+      },
+      "patch": {
+        "operationId": "actualizarPromocion",
+        "summary": "Modificar parcialmente y validar el estado resultante",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado correcto",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PromocionAdmin"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: PROMOCION_NO_ENCONTRADA",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 404
+                        },
+                        "code": {
+                          "enum": [
+                            "PROMOCION_NO_ENCONTRADA"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 422
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error: MODALIDAD_BLOQUEADA",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 409
+                        },
+                        "code": {
+                          "enum": [
+                            "MODALIDAD_BLOQUEADA"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "promocionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PromocionPatch"
+              }
+            }
+          }
+        },
+        "x-lab-origin": "adaptado-de-contrato-G6",
+        "x-lab-role": "ADMIN"
+      },
+      "delete": {
+        "operationId": "eliminarPromocionLab",
+        "summary": "Eliminar lógicamente sin borrar el antecedente de activación",
+        "tags": [
+          "Promociones"
+        ],
+        "security": [
+          {
+            "LabBearer": []
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Eliminación lógica realizada; sin cuerpo."
+          },
+          "401": {
+            "description": "Error: NO_AUTENTICADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 401
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTENTICADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error: NO_AUTORIZADO",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 403
+                        },
+                        "code": {
+                          "enum": [
+                            "NO_AUTORIZADO"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error: VALIDACION",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 400
+                        },
+                        "code": {
+                          "enum": [
+                            "VALIDACION"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error: PROMOCION_NO_ENCONTRADA",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Problem"
+                    },
+                    {
+                      "properties": {
+                        "status": {
+                          "const": 404
+                        },
+                        "code": {
+                          "enum": [
+                            "PROMOCION_NO_ENCONTRADA"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "promocionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-lab-origin": "extension-academica",
+        "x-lab-role": "ADMIN"
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "LabBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Tokens de fixtures locales LAB_ADMIN_TOKEN / LAB_READER_TOKEN. No JWT ni integración con Seguridad."
+      }
+    },
+    "schemas": {
+      "Alcance": {
+        "type": "object",
+        "properties": {
+          "productIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "skus": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [],
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "productIds"
+            ],
+            "properties": {
+              "productIds": {
+                "minItems": 1
+              }
+            }
+          },
+          {
+            "required": [
+              "skus"
+            ],
+            "properties": {
+              "skus": {
+                "minItems": 1
+              }
+            }
+          }
+        ]
+      },
+      "PoliticaCombinacion": {
+        "type": "object",
+        "properties": {
+          "ofertaPricing": {
+            "type": "boolean"
+          },
+          "promocionAutomatica": {
+            "type": "boolean"
+          },
+          "cupon": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ofertaPricing",
+          "promocionAutomatica",
+          "cupon"
+        ],
+        "additionalProperties": false
+      },
+      "PromocionCreate": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "\\S"
+          },
+          "tipoDescuento": {
+            "type": "string",
+            "enum": [
+              "PORCENTAJE",
+              "MONTO_FIJO"
+            ]
+          },
+          "valor": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "modalidad": {
+            "type": "string",
+            "enum": [
+              "AUTOMATICA",
+              "CUPON"
+            ]
+          },
+          "estado": {
+            "type": "string",
+            "enum": [
+              "ACTIVO",
+              "INACTIVO"
+            ]
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "alcance": {
+            "$ref": "#/components/schemas/Alcance"
+          },
+          "prioridad": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "canalesHabilitados": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "MARKETPLACE",
+                "CHATBOT",
+                "RETAIL",
+                "VENTAS"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "politicaCombinacion": {
+            "$ref": "#/components/schemas/PoliticaCombinacion"
+          }
+        },
+        "required": [
+          "nombre",
+          "tipoDescuento",
+          "valor",
+          "modalidad",
+          "estado",
+          "validFrom",
+          "validUntil",
+          "alcance",
+          "prioridad",
+          "canalesHabilitados",
+          "politicaCombinacion"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "tipoDescuento": {
+                  "const": "PORCENTAJE"
+                }
+              },
+              "required": [
+                "tipoDescuento"
+              ]
+            },
+            "then": {
+              "properties": {
+                "valor": {
+                  "maximum": 100
+                }
+              }
+            }
+          }
+        ],
+        "description": "Validar además validFrom < validUntil y referencias activas del catálogo académico."
+      },
+      "PromocionPatch": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "\\S"
+          },
+          "tipoDescuento": {
+            "type": "string",
+            "enum": [
+              "PORCENTAJE",
+              "MONTO_FIJO"
+            ]
+          },
+          "valor": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "modalidad": {
+            "type": "string",
+            "enum": [
+              "AUTOMATICA",
+              "CUPON"
+            ]
+          },
+          "estado": {
+            "type": "string",
+            "enum": [
+              "ACTIVO",
+              "INACTIVO"
+            ]
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "alcance": {
+            "$ref": "#/components/schemas/Alcance"
+          },
+          "prioridad": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "canalesHabilitados": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "MARKETPLACE",
+                "CHATBOT",
+                "RETAIL",
+                "VENTAS"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "politicaCombinacion": {
+            "$ref": "#/components/schemas/PoliticaCombinacion"
+          }
+        },
+        "required": [],
+        "additionalProperties": false,
+        "minProperties": 1,
+        "description": "Fusionar con lo persistido y validar la entidad completa; no borrar valores omitidos."
+      },
+      "PromocionAdmin": {
+        "type": "object",
+        "properties": {
+          "promotionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombre": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "pattern": "\\S"
+          },
+          "tipoDescuento": {
+            "type": "string",
+            "enum": [
+              "PORCENTAJE",
+              "MONTO_FIJO"
+            ]
+          },
+          "valor": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "modalidad": {
+            "type": "string",
+            "enum": [
+              "AUTOMATICA",
+              "CUPON"
+            ]
+          },
+          "estado": {
+            "type": "string",
+            "enum": [
+              "ACTIVO",
+              "INACTIVO"
+            ]
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "alcance": {
+            "$ref": "#/components/schemas/Alcance"
+          },
+          "prioridad": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "canalesHabilitados": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "MARKETPLACE",
+                "CHATBOT",
+                "RETAIL",
+                "VENTAS"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "politicaCombinacion": {
+            "$ref": "#/components/schemas/PoliticaCombinacion"
+          },
+          "puedeCambiarModalidad": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "required": [
+          "promotionId",
+          "nombre",
+          "tipoDescuento",
+          "valor",
+          "modalidad",
+          "estado",
+          "validFrom",
+          "validUntil",
+          "alcance",
+          "prioridad",
+          "canalesHabilitados",
+          "politicaCombinacion",
+          "puedeCambiarModalidad"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "tipoDescuento": {
+                  "const": "PORCENTAJE"
+                }
+              },
+              "required": [
+                "tipoDescuento"
+              ]
+            },
+            "then": {
+              "properties": {
+                "valor": {
+                  "maximum": 100
+                }
+              }
+            }
+          }
+        ]
+      },
+      "PromocionResumen": {
+        "type": "object",
+        "properties": {
+          "promotion_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVA",
+              "INACTIVA"
+            ]
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "MARKETPLACE",
+                "CHATBOT",
+                "RETAIL",
+                "VENTAS"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "promotion_id",
+          "name",
+          "status",
+          "valid_from",
+          "valid_until",
+          "channels"
+        ],
+        "additionalProperties": false
+      },
+      "PageMeta": {
+        "type": "object",
+        "properties": {
+          "pagina": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tamanio": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "totalPaginas": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "pagina",
+          "tamanio",
+          "total",
+          "totalPaginas"
+        ],
+        "additionalProperties": false
+      },
+      "PaginaPromocionesAdmin": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PromocionAdmin"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PageMeta"
+          }
+        },
+        "required": [
+          "items",
+          "meta"
+        ],
+        "additionalProperties": false
+      },
+      "PromocionesComerciales": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PromocionResumen"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "additionalProperties": false
+      },
+      "LoteCreate": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PromocionCreate"
+            },
+            "minItems": 1,
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "additionalProperties": false
+      },
+      "LoteResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PromocionAdmin"
+            },
+            "minItems": 1,
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "additionalProperties": false
+      },
+      "Problem": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "minimum": 400,
+            "maximum": 599
+          },
+          "code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "code",
+          "title"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "x-lab-original-version": "0.6.0-rc.1",
+  "x-lab-original-admin-status": "provisional-internal",
+  "x-lab-required-operations": {
+    "creation": 2,
+    "modification": 1,
+    "deletion": 1,
+    "query": 3
+  }
+}

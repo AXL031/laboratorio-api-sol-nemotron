@@ -1,0 +1,12 @@
+{
+  "estado": "PASS",
+  "fecha": "2026-11-14",
+  "archivos_revisados": 190,
+  "bytes": 1527581,
+  "enlaces_locales_rotos": 0,
+  "patrones_de_credenciales_detectados": 0,
+  "codigo_y_entradas_conservados": true,
+  "resultados_incluidos": "Solo Sol; Nemotron tiene entradas iniciales",
+  "nota": "typecheck-tests.log de A no estaba disponible; documentado sin crear evidencia ficticia",
+  "metodo": "Lista de inclusión, revisión de enlaces/JSON, SHA-256 y patrones de secretos; no certificación universal"
+}

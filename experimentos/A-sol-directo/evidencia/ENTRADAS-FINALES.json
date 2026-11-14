@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-11-14T12:58:07.436Z",
+  "checks": [
+    {
+      "archivo": "contrato/openapi.yaml",
+      "antes": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "despues": "0591300def1e263a3789b66b62b7e6a0e090c810088cd8f2e13ed83c6d794cd0",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "contrato/contexto.md",
+      "antes": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "despues": "b1a354b5a7b0c9e727f2aa533f84a25f6385213608f802aa1bf9ac429217e5e0",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "contrato/catalogo.json",
+      "antes": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "despues": "de09e88e9316870b2affa2446c82161fd9d32004db316017b1ddea0a835ab20b",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "ENTREGA.md",
+      "antes": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "despues": "bc2d1b058901c54e1825f7d0c096952f51e5c929f9471382fc5cf775f6854f2a",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "ENTORNO.md",
+      "antes": "2cfa75e3b14b93c6e6dc400a5456dd3a2d88adac7d2bce0e83a6c1a885cd56a0",
+      "despues": "2cfa75e3b14b93c6e6dc400a5456dd3a2d88adac7d2bce0e83a6c1a885cd56a0",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "package.json",
+      "antes": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "despues": "32ce5600d29dcfe11bc5e57b686e70860b4d578cd0ca816e2fe080bf7c826a2d",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "package-lock.json",
+      "antes": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "despues": "df9d4b26d79f33404fe4f605831e4daa30db450ae7ce14c82923fb0b1246a223",
+      "estado": "PASS"
+    },
+    {
+      "archivo": "tsconfig.json",
+      "antes": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "despues": "68bebdfda688b78bae4f82a2cb823fbfc0a9f9edd44b0fb6deaf48bb92b5ac84",
+      "estado": "PASS"
+    }
+  ],
+  "estado": "PASS"
+}
