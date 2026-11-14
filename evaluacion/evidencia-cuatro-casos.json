@@ -355,15 +355,21 @@
   "e2e_Nemotron": "Declaradas por usuario/agente, no reejecutadas ni logs originales conservados encontrados en la revisión",
   "tiempos": {
     "unidad": "minutos:segundos",
-    "fuente": "Tiempos comunicados por el usuario, no extraídos de Vitest; no se proporcionó desglose de generación/pruebas/esperas",
+    "fuente": "Sol A/C: eventos task_started/task_complete de las sesiones finales. Nemotron B/D: tiempos comunicados por el usuario. No son duraciones de Vitest ni se dispone de desglose por actividad.",
     "casos": {
       "A": {
-        "tiempo": "16:47",
-        "segundos": 1007
+        "tiempo": "12:19",
+        "segundos": 739,
+        "duracion_registrada_segundos": 739.468,
+        "fuente": "Eventos de inicio y fin de la sesión final de Codex; milisegundos omitidos en mm:ss.",
+        "tiempo_informado_original_usuario": "16:47"
       },
       "C": {
-        "tiempo": "12:19",
-        "segundos": 739
+        "tiempo": "16:47",
+        "segundos": 1007,
+        "duracion_registrada_segundos": 1007.843,
+        "fuente": "Eventos de inicio y fin de la sesión final de Codex; milisegundos omitidos en mm:ss.",
+        "tiempo_informado_original_usuario": "12:19"
       },
       "B": {
         "tiempo": "13:06",
@@ -373,7 +379,8 @@
         "tiempo": "18:37",
         "segundos": 1117
       }
-    }
+    },
+    "correccion": "Aplicada el 14 de noviembre de 2026 a petición del usuario: los valores iniciales de Sol A y C estaban intercambiados."
   },
   "codigo_sin_correcciones": true
 }

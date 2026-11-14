@@ -9,15 +9,15 @@ Un chat nuevo y **un único prompt por caso**. Directo: contrato/contexto. Con s
 
 | Caso | Modelo | Enfoque | Tiempo (mm:ss) | Unitarias propias | E2E propias |
 |---|---|---|---:|---:|---:|
-| [A](experimentos/A-sol-directo/proyecto) | GPT-6.1 Sol | Directo | **16:47** | 87/87 | 59/59 |
-| [C](experimentos/C-sol-spec/proyecto) | GPT-6.1 Sol | Con spec | **12:19** | 91/91 | 68/68 |
+| [A](experimentos/A-sol-directo/proyecto) | GPT-6.1 Sol | Directo | **12:19** | 87/87 | 59/59 |
+| [C](experimentos/C-sol-spec/proyecto) | GPT-6.1 Sol | Con spec | **16:47** | 91/91 | 68/68 |
 | [B](experimentos/B-nemotron-directo/proyecto) | Nemotron 3.5 Super VL Free | Directo | **13:06** | 39/39 | 35/35 reportadas |
 | [D](experimentos/D-nemotron-spec/proyecto) | Nemotron 3.5 Super VL Free | Con spec | **18:37** | 44/44 | 37/37 reportadas |
 
 Build y typecheck: exit 0 en las cuatro entregas según sus reportes; B/D se repitieron durante la revisión con exit 0.
-Los tiempos son los **informados por el usuario en minutos:segundos**, no la duración de Vitest ni mediciones instrumentadas.
-C tardó 4:28 menos que A; D tardó 5:31 más que B. El enfoque con spec no fue más rápido en ambos modelos.
-Entre modelos, B tardó 3:41 menos que A y C tardó 6:18 menos que D. C tiene el menor tiempo informado de la muestra.
+Los tiempos de **Sol se corrigieron con los eventos de inicio/fin de sus sesiones finales**; los de Nemotron son los informados por el usuario. Se presentan en minutos:segundos, no como duración de Vitest. No se dispone de un desglose de generación, pruebas y esperas.
+C tardó 4:28 más que A; D tardó 5:31 más que B. En esta muestra, el enfoque con spec tardó más en ambos modelos.
+Entre modelos, A tardó 0:47 menos que B y C tardó 1:50 menos que D. A tiene el menor tiempo registrado de la muestra.
 
 **Las cantidades de tests no miden calidad ni cobertura comparable:** las suites las escribió cada agente.
 Sol cuenta con logs/JSON guardados de unit/e2e y comprobaciones HTTP/reinicio de proceso.
@@ -47,7 +47,7 @@ Las capturas aportadas muestran **126.550 tokens en B y 295.761 en D**. Estos va
 
 **Límites de comparación.** Los proveedores pueden usar tokenizadores y criterios de reporte distintos. El total incluye lecturas repetidas de contexto y caché; no representa texto único generado, calidad, costo comparable ni eficiencia universal del modelo. En esta muestra, la variante con spec acumuló más tokens en ambos modelos.
 
-**Discrepancia de tiempos.** Los valores de la tabla inicial se conservan como fueron informados por el usuario. Sin embargo, los eventos `task_started`/`task_complete` de las sesiones que entregaron 87/59 pruebas (A) y 91/68 (C) registran A = **12:19,468** y C = **16:47,843**, respectivamente. Los tiempos informados de Sol parecen intercambiados; las conclusiones de velocidad basadas en ellos quedan pendientes de reconciliar ambas fuentes.
+**Corrección de tiempos aplicada.** Los valores iniciales de Sol estaban intercambiados. Los eventos `task_started`/`task_complete` de las sesiones que entregaron 87/59 pruebas (A) y 91/68 (C) registran A = **12:19,468** y C = **16:47,843**, respectivamente. Las tablas y comparaciones usan ahora **A = 12:19** y **C = 16:47**, omitiendo milisegundos. Se conserva la procedencia de la corrección en [tiempos.json](evaluacion/tiempos.json).
 
 Evidencia seleccionada y fórmulas: [tokens.json](evaluacion/tokens.json). No se publican conversaciones ni bases locales.
 
@@ -77,7 +77,7 @@ Sol construyó dos implementaciones NestJS con PostgreSQL real: A desde contrato
 
 **Qué hizo.** Implementó el acceso SQL de promociones principalmente en el servicio, con una clase de conexión aparte. Incluyó creación individual y por lote, fusión de PATCH, historial de activación, borrado lógico y consultas comerciales/administrativas. Conservó reportes de las siete operaciones, rollback de lote ante un fallo SQL y persistencia entre procesos.
 
-**Resultados.** Tiempo informado: **16:47**. Unitarias: **87/87**. E2E: **59/59**. Build y typecheck: exit 0, según las evidencias de la entrega. [Reporte de A](experimentos/A-sol-directo/evidencia/REPORTE.md).
+**Resultados.** Tiempo corregido desde la sesión: **12:19**. Unitarias: **87/87**. E2E: **59/59**. Build y typecheck: exit 0, según las evidencias de la entrega. [Reporte de A](experimentos/A-sol-directo/evidencia/REPORTE.md).
 
 **Errores, riesgos y limitaciones.** El servicio lee promoción y configuración mediante un JOIN y bloquea solo la fila principal. Si espera a otra transacción que cambia los datos asociados, existe riesgo de leer configuración antigua y perder cambios omitidos por el PATCH. Su prueba concurrente solo cambia nombre y prioridad de la tabla principal; no fuerza ese escenario asociado. Es un **riesgo por inspección, no reproducido directamente en A**. También restringe prioridad a enteros seguros de JavaScript, un máximo que el contrato no declara. Esta limitación está documentada, pero documentarla no modifica el contrato.
 
@@ -87,7 +87,7 @@ Sol construyó dos implementaciones NestJS con PostgreSQL real: A desde contrato
 
 **Qué hizo.** Usó los mismos requisitos de A más los tres documentos preparados. Separó dominio, repositorio y base de datos, incorporó defensas de integridad en SQL y relacionó tareas/etapas con archivos y resultados en `AVANCE.md`. Incluyó pruebas de contrato, concurrencia, rollback y persistencia.
 
-**Resultados.** Tiempo informado: **12:19**. Unitarias: **91/91**. E2E finales: **68/68**. Build y typecheck: exit 0, según los logs conservados. [AVANCE de C](experimentos/C-sol-spec/proyecto/AVANCE.md).
+**Resultados.** Tiempo corregido desde la sesión: **16:47**. Unitarias: **91/91**. E2E finales: **68/68**. Build y typecheck: exit 0, según los logs conservados. [AVANCE de C](experimentos/C-sol-spec/proyecto/AVANCE.md).
 
 **Error observado y corrección.** La primera versión pasó 67 e2e, pero una prueba adicional que fuerza una espera de bloqueo encontró un error real: PATCH recuperaba alcance/política antiguos. Esperaba `SKU-LAB-002` y la política recién confirmada, pero recibía `SKU-LAB-001` y la política anterior. Se conserva [la prueba fallida antes de corregir](experimentos/C-sol-spec/proyecto/evidencias/regresion-concurrencia-antes.txt). El agente corrigió la lectura para bloquear primero la promoción y releer después los asociados en una nueva sentencia de la misma transacción. La regresión forma parte de las 68 e2e finales aprobadas. **Es un defecto inicial corregido, no un fallo pendiente del código final de C.**
 
@@ -136,10 +136,10 @@ D **sí** devolvió 401 antes de procesar JSON malformado cuando faltaba token; 
 
 ## Comparación de lo observado
 
-- **A frente a C, dentro de Sol:** C tardó 4:28 menos y ofreció mayor trazabilidad, además de corregir el caso concurrente documentado. A pasó sus pruebas, pero no cubre ese mismo escenario.
+- **A frente a C, dentro de Sol:** C tardó 4:28 más y ofreció mayor trazabilidad, además de corregir el caso concurrente documentado. A pasó sus pruebas, pero no cubre ese mismo escenario.
 - **B frente a D, dentro de Nemotron:** D tardó 5:31 más. Mejoró el orden de autenticación observado en B y configuró el prefijo, pero conservó problemas de errores, validación y uso del bloqueo.
-- **A frente a B, enfoque directo:** B tardó 3:41 menos, pero las sondas encontraron diferencias contractuales que su suite no detectaba. Un tiempo menor no basta para considerar mejor una entrega.
-- **C frente a D, con spec:** C tardó 6:18 menos y dejó evidencia más completa de regresión y reinicio de proceso. Los documentos de entrada eran iguales, pero su aplicación no produjo resultados equivalentes.
+- **A frente a B, enfoque directo:** A tardó 0:47 menos. Las sondas encontraron en B diferencias contractuales que su suite no detectaba; el tiempo por sí solo no determina la calidad de una entrega.
+- **C frente a D, con spec:** C tardó 1:50 menos y dejó evidencia más completa de regresión y reinicio de proceso. Los documentos de entrada eran iguales, pero su aplicación no produjo resultados equivalentes.
 
 No se comparan cantidades de tests como si fueran la misma cobertura. Para las fuentes y límites de cada hallazgo, consultar el [informe completo](evaluacion/informe-comparativo.md).
 
@@ -308,8 +308,8 @@ Los bloqueos iniciales de caché/dependencias y permisos fueron problemas del en
 
 ## Conclusión final
 
-En este laboratorio, **Sol C fue la entrega mejor sustentada**: tuvo el menor tiempo informado, mayor trazabilidad y evidencia de un fallo concurrente descubierto y corregido con una regresión. Sol A también entregó un API que pasó sus comprobaciones, con el riesgo concurrente y las limitaciones señaladas. Nemotron produjo código compilable y pruebas aprobadas en ambos enfoques, pero la revisión independiente encontró incumplimientos que limitan su afirmación de verificación completa.
+En este laboratorio, **Sol C fue la entrega mejor sustentada** por su trazabilidad y la evidencia de un fallo concurrente descubierto y corregido con una regresión. **Sol A fue el caso más rápido**, con 12:19, y también entregó un API que pasó sus comprobaciones, con el riesgo concurrente y las limitaciones señaladas. Nemotron produjo código compilable y pruebas aprobadas en ambos enfoques, pero la revisión independiente encontró incumplimientos que limitan su afirmación de verificación completa.
 
-La spec **no mejoró automáticamente todos los resultados ni redujo siempre el tiempo**: Sol C fue más rápido que A, mientras Nemotron D tardó más que B y conservó fallos. La conclusión práctica es usar la IA como apoyo de implementación, mantener requisitos explícitos y validar el contrato con pruebas que puedan refutar la solución, especialmente en errores, límites y concurrencia.
+La spec **no mejoró automáticamente todos los resultados y aumentó el tiempo en ambos modelos en esta muestra**: Sol C tardó 4:28 más que A, mientras Nemotron D tardó 5:31 más que B y conservó fallos. La conclusión práctica es usar la IA como apoyo de implementación, mantener requisitos explícitos y validar el contrato con pruebas que puedan refutar la solución, especialmente en errores, límites y concurrencia.
 
-Estos resultados describen una muestra de una corrida por caso, con clientes distintos y tiempos informados por el equipo, sin desglose instrumentado ni suites propias equivalentes. No demuestran superioridad universal ni causalidad de un enfoque. El aprendizaje principal es **evaluar lo que el sistema hace y la evidencia que lo demuestra, no solo lo que el agente afirma haber completado**.
+Estos resultados describen una muestra de una corrida por caso, con clientes distintos, tiempos de Sol recuperados de eventos de sesión y tiempos de Nemotron informados por el equipo, sin desglose por actividad ni suites propias equivalentes. No demuestran superioridad universal ni causalidad de un enfoque. El aprendizaje principal es **evaluar lo que el sistema hace y la evidencia que lo demuestra, no solo lo que el agente afirma haber completado**.

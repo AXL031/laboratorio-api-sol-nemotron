@@ -5,18 +5,19 @@ Enfoques: directo y con spec/plan/tareas preparados. Un prompt por caso; las ite
 
 ## Resultados y tiempos
 
-| Caso | Modelo / enfoque | Tiempo informado (mm:ss) | Build/tipos | Unitarias | E2E propias |
+| Caso | Modelo / enfoque | Tiempo (mm:ss) | Build/tipos | Unitarias | E2E propias |
 |---|---|---:|---|---:|---:|
-| A | Sol directo | 16:47 | PASS en logs | 87/87 | 59/59 |
-| C | Sol con spec | 12:19 | PASS en logs | 91/91 | 68/68 |
+| A | Sol directo | 12:19 | PASS en logs | 87/87 | 59/59 |
+| C | Sol con spec | 16:47 | PASS en logs | 91/91 | 68/68 |
 | B | Nemotron directo | 13:06 | PASS reportado y repetido | 39/39 repetidas | 35/35 reportadas |
 | D | Nemotron con spec | 18:37 | PASS reportado y repetido | 44/44 repetidas | 37/37 reportadas |
 
-Los tiempos fueron comunicados por el usuario y se interpretan como minutos:segundos. No provienen de la duración
-de Vitest ni de mediciones instrumentadas; no se aportó desglose de generación, pruebas, aprobación o espera.
-C tardó 4:28 menos que A; D tardó 5:31 más que B. B tardó 3:41 menos que A, mientras C tardó 6:18 menos que D.
-Por tanto, la spec no produjo una reducción uniforme de tiempo: depende del caso observado. C fue el menor tiempo
-informado, sin que ello pruebe una ventaja general o causal. No se convierten cantidades de tests en cobertura comparable.
+Los tiempos de Sol se corrigieron mediante los eventos task_started/task_complete de sus sesiones finales:
+A = 739,468 segundos y C = 1007,843 segundos. La tabla omite milisegundos. Los tiempos de Nemotron fueron
+comunicados por el usuario. No son duraciones de Vitest ni se dispone de desglose por actividad.
+C tardó 4:28 más que A; D tardó 5:31 más que B. A tardó 0:47 menos que B, mientras C tardó 1:50 menos que D.
+En esta muestra, la spec aumentó el tiempo en ambos modelos. A fue el caso más rápido, sin que ello pruebe una
+ventaja general o causal. No se convierten cantidades de tests en cobertura comparable. [Procedencia y corrección](tiempos.json).
 
 ## Evidencia y método
 
@@ -96,9 +97,9 @@ que una suite inicialmente verde no cubría una carrera real. La respuesta corre
 casos de concurrencia, detalles contractuales y cobertura/alcance de sus afirmaciones, con distinto estado en cada caso.
 
 En esta muestra, Sol C ofrece la entrega mejor sustentada de las cuatro por trazabilidad, evidencia preservada y
-regresión concurrente corregida, además del menor tiempo informado. Es una conclusión cualitativa de este laboratorio,
+regresión concurrente corregida. Sol A fue el caso más rápido (12:19). Es una conclusión cualitativa de este laboratorio,
 no un ranking universal: hay una corrida por celda, distintos clientes y suites propias no equivalentes. La spec no garantiza
-mejor resultado: Nemotron D tardó más y conserva incumplimientos pese a disponer de las mismas entradas preparadas.
+mejor resultado: ambos casos con spec tardaron más que sus pares directos y Nemotron D conserva incumplimientos pese a disponer de las mismas entradas preparadas.
 La revisión humana debe comprobar el contrato de forma externa, diseñar casos adversos y distinguir reporte del agente,
 ejecución real y riesgos por inspección. No se modificaron las implementaciones para hacerlas pasar durante el análisis.
 
@@ -107,5 +108,5 @@ ejecución real y riesgos por inspección. No se modificaron las implementacione
 > La IA generó las siete operaciones y pruebas en los cuatro casos, pero acertar la estructura y aprobar sus propias
 > pruebas no garantizó cumplir el contrato. Sol tuvo un fallo concurrente que C detectó y corrigió con una prueba adicional;
 > Nemotron dejó diferencias en prefijo, errores, fechas y bloqueos que sus suites no detectaban. La spec ayudó a orientar
-> y revisar el trabajo, pero no evitó automáticamente los errores ni siempre redujo el tiempo. Aprendimos a validar con
+> y revisar el trabajo, pero no evitó automáticamente los errores y en esta muestra aumentó el tiempo. Aprendimos a validar con
 > casos independientes y a exigir evidencia antes de aceptar «todo está verificado».
