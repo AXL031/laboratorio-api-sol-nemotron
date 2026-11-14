@@ -30,6 +30,27 @@ Fuentes: [A: reporte](experimentos/A-sol-directo/evidencia/REPORTE.md), [C: AVAN
 [verificación independiente de Nemotron](evaluacion/verificacion-nemotron/revision-nemotron.json),
 [tiempos](evaluacion/tiempos.json), [disponibilidad de evidencia](docs/limitaciones-evidencia.md).
 
+## Consumo de tokens por intento
+
+Contadores recuperados de las sesiones finales del laboratorio el 14 de noviembre de 2026. Se excluyen intentos anteriores, el chat del evaluador y las sesiones separadas `codex-auto-review`.
+
+| Caso | Modelo | Entrada sin caché | Lectura de caché | Salida con razonamiento | Total normalizado |
+|---|---|---:|---:|---:|---:|
+| A | GPT-6.1 Sol | 36,251 | 618,496 | 28,974 | **683,721** |
+| C | GPT-6.1 Sol | 42,453 | 912,896 | 38,294 | **993,643** |
+| B | Nemotron | 171,042 | 4,548,464 | 77,298 | **4,796,804** |
+| D | Nemotron | 461,637 | 13,571,680 | 87,445 | **14,120,762** |
+
+**Método.** En Codex se toma el último `total_token_usage`, sin sumar sus eventos acumulados. Su entrada ya incluye caché y su salida incluye razonamiento. En OpenCode se suman los contadores de cada respuesta del modelo (53 en B y 100 en D); entrada, salida, razonamiento y caché están separados. Aquí la salida incorpora razonamiento para presentar columnas equivalentes. Todas las escrituras de caché registradas son cero.
+
+Las capturas aportadas muestran **126.550 tokens en B y 295.761 en D**. Estos valores coinciden exactamente con los contadores de la **última respuesta**, no con el consumo acumulado del intento. El agregado interno de sesión de OpenCode es ligeramente mayor que la suma de respuestas: 4.797.856 en B y 14.121.824 en D. Se conservan ambas medidas en la evidencia; no se atribuye la diferencia a una causa sin comprobarla. El costo registrado por OpenCode es US$0 para ambas sesiones gratuitas; no se calculó un costo monetario equivalente para Sol.
+
+**Límites de comparación.** Los proveedores pueden usar tokenizadores y criterios de reporte distintos. El total incluye lecturas repetidas de contexto y caché; no representa texto único generado, calidad, costo comparable ni eficiencia universal del modelo. En esta muestra, la variante con spec acumuló más tokens en ambos modelos.
+
+**Discrepancia de tiempos.** Los valores de la tabla inicial se conservan como fueron informados por el usuario. Sin embargo, los eventos `task_started`/`task_complete` de las sesiones que entregaron 87/59 pruebas (A) y 91/68 (C) registran A = **12:19,468** y C = **16:47,843**, respectivamente. Los tiempos informados de Sol parecen intercambiados; las conclusiones de velocidad basadas en ellos quedan pendientes de reconciliar ambas fuentes.
+
+Evidencia seleccionada y fórmulas: [tokens.json](evaluacion/tokens.json). No se publican conversaciones ni bases locales.
+
 ## API del laboratorio
 
 Entidad Promoción con **14 columnas físicas**: 13 del modelo de origen más `deleted_at`.
